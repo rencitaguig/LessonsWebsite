@@ -1,6 +1,5 @@
 [
   {
-    "topicId": 2,
     "title": "L15.1 — Robotic Arm Structure Quiz",
     "passingScore": 60,
     "questions": [
@@ -12,7 +11,6 @@
     ]
   },
   {
-    "topicId": 3,
     "title": "L15.2 — Position and Orientation Quiz",
     "passingScore": 60,
     "questions": [
@@ -24,7 +22,6 @@
     ]
   },
   {
-    "topicId": 4,
     "title": "L15.3 — Joint-Space and Cartesian Motion Quiz",
     "passingScore": 60,
     "questions": [
@@ -36,7 +33,6 @@
     ]
   },
   {
-    "topicId": 5,
     "title": "L15.4 — Gripper Mechanisms Quiz",
     "passingScore": 60,
     "questions": [
@@ -48,7 +44,6 @@
     ]
   },
   {
-    "topicId": 6,
     "title": "L15.5 — Grasping and Contact Forces Quiz",
     "passingScore": 60,
     "questions": [
@@ -60,7 +55,6 @@
     ]
   },
   {
-    "topicId": 7,
     "title": "L15.6 — Static Equilibrium of the Arm Quiz",
     "passingScore": 60,
     "questions": [
@@ -72,7 +66,6 @@
     ]
   },
   {
-    "topicId": 8,
     "title": "L15.7 — Position Control and Force Control Quiz",
     "passingScore": 60,
     "questions": [
@@ -84,7 +77,6 @@
     ]
   },
   {
-    "topicId": 9,
     "title": "L15.8 — Pick-and-Place Sequence Quiz",
     "passingScore": 60,
     "questions": [
@@ -96,7 +88,6 @@
     ]
   },
   {
-    "topicId": 10,
     "title": "L15.9 — Python Simulation Plan Quiz",
     "passingScore": 60,
     "questions": [
@@ -108,7 +99,6 @@
     ]
   },
   {
-    "topicId": 11,
     "title": "L15.10 — Example Program Logic Quiz",
     "passingScore": 60,
     "questions": [

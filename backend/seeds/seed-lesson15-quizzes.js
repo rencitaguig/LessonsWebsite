@@ -14,6 +14,11 @@ async function requestJson(url, options) {
   return data;
 }
 
+// Quizzes target subtopics by title: "L15.1 — Robotic Arm Structure Quiz" -> "L15.1 — Robotic Arm Structure"
+function subtopicTitle(quizTitle) {
+  return quizTitle.replace(/\s+Quiz$/, '');
+}
+
 async function seed() {
   const quizzes = JSON.parse(fs.readFileSync(quizFile, 'utf8'));
   const topics = await requestJson(`${apiUrl}/api/topics`);
@@ -23,10 +28,14 @@ async function seed() {
     throw new Error(`Parent topic "${parentTopicTitle}" was not found.`);
   }
 
-  for (const quiz of quizzes) {
-    const topic = topics.find((item) => item.id === quiz.topicId);
-    if (!topic || topic.parent_topic_id !== parent.id) {
-      throw new Error(`Topic ID ${quiz.topicId} is not a subtopic of "${parentTopicTitle}".`);
+  const targets = quizzes.map((quiz) => ({
+    quiz,
+    topic: topics.find((item) => item.title === subtopicTitle(quiz.title) && item.parent_topic_id === parent.id)
+  }));
+
+  for (const { quiz, topic } of targets) {
+    if (!topic) {
+      throw new Error(`Subtopic "${subtopicTitle(quiz.title)}" was not found under "${parentTopicTitle}".`);
     }
     if (topic.quiz_id) {
       throw new Error(`A quiz is already assigned to "${topic.title}"; refusing to replace it.`);
@@ -36,11 +45,11 @@ async function seed() {
     }
   }
 
-  for (const quiz of quizzes) {
+  for (const { quiz, topic } of targets) {
     const result = await requestJson(`${apiUrl}/api/quizzes`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(quiz)
+      body: JSON.stringify({ topicId: topic.id, title: quiz.title, passingScore: quiz.passingScore, questions: quiz.questions })
     });
     console.log(`Inserted quiz ${result.id} for topic ${result.topicId}: ${result.title}`);
   }
