@@ -6,29 +6,35 @@ interface ExplanationPanelProps {
   result: IkResult | null;
   l1: number;
   l2: number;
+  shoulderH: number;
+  gripY: number;
 }
 
 const deg = (radians: number) => `${toDegrees(radians).toFixed(1)}°`;
 
-export default function ExplanationPanel({ result, l1, l2 }: ExplanationPanelProps) {
+export default function ExplanationPanel({ result, l1, l2, shoulderH, gripY }: ExplanationPanelProps) {
   return (
     <View style={styles.panel}>
       <Text style={styles.heading}>Inverse Kinematics — worked solution</Text>
 
       {!result && (
         <Text style={styles.body}>
-          Drag the orange target on the ground plane. When you release it, the solver computes the joint angles
-          θ₁ and θ₂ required for the gripper to reach it — the same math described in L15.2 and L15.9.
+          Drag the orange crate on the ground plane. The base slews to face it (θ₀), then the shoulder and
+          elbow solve a two-link planar IK to reach it — the same math described in L15.2 and L15.9.
         </Text>
       )}
 
       {result && (
         <>
           <Text style={styles.step}>
-            1. Target (x, y) = ({result.target.x.toFixed(2)}, {result.target.y.toFixed(2)})   d = √(x² + y²) = {result.distance.toFixed(2)}
+            0. Slew: θ₀ = atan2(z, x) = {deg(result.yaw)} — the turntable faces the target.
           </Text>
           <Text style={styles.step}>
-            2. cos θ₂ = (d² − L₁² − L₂²) / (2·L₁·L₂) = {result.cosTheta2.toFixed(3)}
+            1. Arm plane: r = √(x² + z²) = {result.radius.toFixed(2)}, drop = {result.drop.toFixed(2)},
+            {'  '}|P| = √(r² + drop²) = {result.reach.toFixed(2)}
+          </Text>
+          <Text style={styles.step}>
+            2. cos θ₂ = (|P|² − L₁² − L₂²) / (2·L₁·L₂) = {result.cosTheta2.toFixed(3)}
           </Text>
           {!result.reachable && (
             <Text style={[styles.step, styles.error]}>✕ {result.reason}</Text>
@@ -40,18 +46,20 @@ export default function ExplanationPanel({ result, l1, l2 }: ExplanationPanelPro
                 {result.solutions.map((s) => `${s.elbow} (θ₂ = ${deg(s.theta2)})`).join(', ')}
               </Text>
               <Text style={styles.step}>
-                4. θ₁ = atan2(y, x) − atan2(L₂·sin θ₂, L₁ + L₂·cos θ₂)
+                4. θ₁ = atan2(drop, r) − atan2(L₂·sin θ₂, L₁ + L₂·cos θ₂)
               </Text>
               <Text style={[styles.step, styles.chosen]}>
-                ✓ Chosen: {result.chosen.elbow} → θ₁ = {deg(result.chosen.theta1)}, θ₂ = {deg(result.chosen.theta2)}
-                {'  '}(nearest to the current arm pose)
+                ✓ Chosen: {result.chosen.elbow} → θ₀ = {deg(result.chosen.yaw)}, θ₁ = {deg(result.chosen.theta1)},
+                θ₂ = {deg(result.chosen.theta2)}
               </Text>
             </>
           )}
         </>
       )}
 
-      <Text style={styles.footer}>L₁ = {l1.toFixed(2)}, L₂ = {l2.toFixed(2)} · joint limits θ₁ ±150°, θ₂ ±160°</Text>
+      <Text style={styles.footer}>
+        L₁ = {l1.toFixed(2)}, L₂ = {l2.toFixed(2)} · shoulder at h = {shoulderH.toFixed(2)}, grip at {gripY.toFixed(2)}
+      </Text>
     </View>
   );
 }
