@@ -9,8 +9,9 @@ export default function SimulationPage() {
       <View style={styles.header}>
         <Text style={styles.title}>Robotic Arm Simulation</Text>
         <Text style={styles.subtitle}>
-          Two-link planar arm (L15.9). Place the target object and the solver computes θ₁ and θ₂ by inverse
-          kinematics — with the worked math shown beside the scene.
+          Industrial crane manipulator (L15.8–L15.10). Place the crate and the crane picks and places it by
+          itself — slewing the base (θ₀) and solving shoulder and elbow angles (θ₁, θ₂) by inverse kinematics,
+          with the worked math and the running pick-and-place state machine beside the scene.
         </Text>
       </View>
       <ArmSimulation />
