@@ -1,0 +1,227 @@
+{
+  "topicId": 32,
+  "title": "L1 — Introduction to Robotics Quiz",
+  "passingScore": 60,
+  "questions": [
+    {
+      "questionText": "What fundamental three-step operational cycle defines robotic systems?",
+      "points": 1,
+      "options": [
+        {
+          "text": "Input -> Compilation -> Output",
+          "isCorrect": false
+        },
+        {
+          "text": "Sense -> Think -> Act",
+          "isCorrect": true
+        },
+        {
+          "text": "Fetch -> Decode -> Execute",
+          "isCorrect": false
+        },
+        {
+          "text": "Observe -> Calibrate -> Terminate",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which subsystem is responsible for transforming computational energy into mechanical force or motion?",
+      "points": 1,
+      "options": [
+        {
+          "text": "Transducer",
+          "isCorrect": false
+        },
+        {
+          "text": "Controller",
+          "isCorrect": false
+        },
+        {
+          "text": "Actuator",
+          "isCorrect": true
+        },
+        {
+          "text": "Inverter",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What type of sensor monitors internal states such as joint angles or motor current?",
+      "points": 1,
+      "options": [
+        {
+          "text": "Exteroceptive",
+          "isCorrect": false
+        },
+        {
+          "text": "Environmental",
+          "isCorrect": false
+        },
+        {
+          "text": "Proprioceptive",
+          "isCorrect": true
+        },
+        {
+          "text": "Ultrasonic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which control architecture connects sensors directly to actuators via prioritized behavioral layers without an internal world model?",
+      "points": 1,
+      "options": [
+        {
+          "text": "Deliberative (Sense-Plan-Act)",
+          "isCorrect": false
+        },
+        {
+          "text": "Reactive (Subsumption)",
+          "isCorrect": true
+        },
+        {
+          "text": "Hierarchical",
+          "isCorrect": false
+        },
+        {
+          "text": "Cloud-Native",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "How many independent spatial coordinates are required to define the pose of a rigid body in 3D Euclidean space?",
+      "points": 1,
+      "options": [
+        {
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "text": "4",
+          "isCorrect": false
+        },
+        {
+          "text": "6",
+          "isCorrect": true
+        },
+        {
+          "text": "8",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is the primary operational distinction between industrial robots and collaborative robots (cobots)?",
+      "points": 1,
+      "options": [
+        {
+          "text": "Cobots use hydraulic pistons exclusively",
+          "isCorrect": false
+        },
+        {
+          "text": "Cobots lack real-time controllers",
+          "isCorrect": false
+        },
+        {
+          "text": "Cobots feature force/power limiting allowing cage-free human interaction",
+          "isCorrect": true
+        },
+        {
+          "text": "Cobots cannot perform pick-and-place tasks",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What is an end-effector?",
+      "points": 1,
+      "options": [
+        {
+          "text": "The primary mounting base bolted to the floor",
+          "isCorrect": false
+        },
+        {
+          "text": "The tool or gripper attached to the robot's final wrist joint",
+          "isCorrect": true
+        },
+        {
+          "text": "The real-time operating system kernel",
+          "isCorrect": false
+        },
+        {
+          "text": "The feedback encoder mounted on joint 1",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What algorithm enables a mobile robot to build an unknown spatial map while simultaneously tracking its location within it?",
+      "points": 1,
+      "options": [
+        {
+          "text": "PID",
+          "isCorrect": false
+        },
+        {
+          "text": "SLAM",
+          "isCorrect": true
+        },
+        {
+          "text": "D-H Convention",
+          "isCorrect": false
+        },
+        {
+          "text": "Fast Fourier Transform",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "What defines the 'work envelope' of a robotic arm?",
+      "points": 1,
+      "options": [
+        {
+          "text": "The maximum electrical wattage drawn at full stall",
+          "isCorrect": false
+        },
+        {
+          "text": "The total 3D spatial volume reachable by the end-effector",
+          "isCorrect": true
+        },
+        {
+          "text": "The shipping container dimensions",
+          "isCorrect": false
+        },
+        {
+          "text": "The thickness of the protective perimeter fencing",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "questionText": "A SCARA robot typically features what combination of kinematic joints?",
+      "points": 1,
+      "options": [
+        {
+          "text": "Three prismatic joints",
+          "isCorrect": false
+        },
+        {
+          "text": "Six revolute joints",
+          "isCorrect": false
+        },
+        {
+          "text": "Parallel vertical revolute axes with a prismatic stroke axis",
+          "isCorrect": true
+        },
+        {
+          "text": "Pure spherical ball-and-socket joints",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

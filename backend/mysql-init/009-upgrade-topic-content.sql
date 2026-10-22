@@ -1,0 +1,3 @@
+USE learn_schema;
+
+ALTER TABLE topics MODIFY COLUMN content MEDIUMTEXT NOT NULL;

@@ -1,0 +1,107 @@
+{
+  "topicId": 27,
+  "title": "Level 5 Quiz — Python for Real-World Applications",
+  "passingScore": 60,
+  "questions": [
+    {
+      "questionText": "According to the Python Database API Specification (PEP 249), which object executes SQL queries and fetches data rows?",
+      "points": 1,
+      "options": [
+        { "text": "Pool", "isCorrect": false },
+        { "text": "Connection", "isCorrect": false },
+        { "text": "Engine", "isCorrect": false },
+        { "text": "Cursor", "isCorrect": true }
+      ]
+    },
+    {
+      "questionText": "Why should SQL queries use parameterized bindings (%s or ?) instead of string interpolation (f-strings)?",
+      "points": 1,
+      "options": [
+        { "text": "To reduce memory consumption in the Python runtime", "isCorrect": false },
+        { "text": "To protect against SQL Injection attacks and handle parameter escaping safely", "isCorrect": true },
+        { "text": "Because f-strings are not supported inside functions", "isCorrect": false },
+        { "text": "To force synchronous query execution", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Which web framework generates interactive OpenAPI/Swagger documentation automatically based on Python type hints?",
+      "points": 1,
+      "options": [
+        { "text": "Django", "isCorrect": false },
+        { "text": "Flask", "isCorrect": false },
+        { "text": "FastAPI", "isCorrect": true },
+        { "text": "Bottle", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What standard library module provides an object-oriented API for path operations and filesystem traversal?",
+      "points": 1,
+      "options": [
+        { "text": "os.file", "isCorrect": false },
+        { "text": "pathlib", "isCorrect": true },
+        { "text": "shutil", "isCorrect": false },
+        { "text": "sys.path", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What is the primary benefit of NumPy arrays over standard Python lists for data processing?",
+      "points": 1,
+      "options": [
+        { "text": "NumPy arrays accept arbitrary mixed types without conversion", "isCorrect": false },
+        { "text": "NumPy arrays run vectorized C-level operations on contiguous memory buffers", "isCorrect": true },
+        { "text": "NumPy arrays are immutable tuples", "isCorrect": false },
+        { "text": "NumPy arrays use no RAM", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "In OpenCV (cv2), what is the default color channel ordering when an image is loaded via cv2.imread()?",
+      "points": 1,
+      "options": [
+        { "text": "RGB (Red-Green-Blue)", "isCorrect": false },
+        { "text": "RGBA (Red-Green-Blue-Alpha)", "isCorrect": false },
+        { "text": "BGR (Blue-Green-Red)", "isCorrect": true },
+        { "text": "Grayscale", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "In robotics and physical computing, what does PWM (Pulse-Width Modulation) control on actuators like servos and DC motors?",
+      "points": 1,
+      "options": [
+        { "text": "The baud rate of serial data", "isCorrect": false },
+        { "text": "The average voltage or pulse duration by modulating the signal duty cycle", "isCorrect": true },
+        { "text": "The network latency between the Pi and microcontrollers", "isCorrect": false },
+        { "text": "The image capture frame rate", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Which hardware communication bus uses two wires labeled SDA (data) and SCL (clock) to connect multiple sensors?",
+      "points": 1,
+      "options": [
+        { "text": "SPI", "isCorrect": false },
+        { "text": "UART", "isCorrect": false },
+        { "text": "I2C", "isCorrect": true },
+        { "text": "CAN bus", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What logic voltage level is safe to apply directly to Raspberry Pi GPIO header pins?",
+      "points": 1,
+      "options": [
+        { "text": "5.0V", "isCorrect": false },
+        { "text": "3.3V", "isCorrect": true },
+        { "text": "12.0V", "isCorrect": false },
+        { "text": "1.8V only", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What is the fundamental cycle that structures autonomous robotics software architectures?",
+      "points": 1,
+      "options": [
+        { "text": "Fetch-Decode-Execute", "isCorrect": false },
+        { "text": "Sense-Think-Act", "isCorrect": true },
+        { "text": "Model-View-Controller", "isCorrect": false },
+        { "text": "Request-Response-Cycle", "isCorrect": false }
+      ]
+    }
+  ]
+}

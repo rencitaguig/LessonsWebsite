@@ -1,0 +1,3180 @@
+[
+  {
+    "topicId": 32,
+    "title": "L1 — Introduction to Robotics Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What fundamental three-step operational cycle defines robotic systems?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Input -> Compilation -> Output",
+            "isCorrect": false
+          },
+          {
+            "text": "Sense -> Think -> Act",
+            "isCorrect": true
+          },
+          {
+            "text": "Fetch -> Decode -> Execute",
+            "isCorrect": false
+          },
+          {
+            "text": "Observe -> Calibrate -> Terminate",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which subsystem is responsible for transforming computational energy into mechanical force or motion?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Transducer",
+            "isCorrect": false
+          },
+          {
+            "text": "Controller",
+            "isCorrect": false
+          },
+          {
+            "text": "Actuator",
+            "isCorrect": true
+          },
+          {
+            "text": "Inverter",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What type of sensor monitors internal states such as joint angles or motor current?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Exteroceptive",
+            "isCorrect": false
+          },
+          {
+            "text": "Environmental",
+            "isCorrect": false
+          },
+          {
+            "text": "Proprioceptive",
+            "isCorrect": true
+          },
+          {
+            "text": "Ultrasonic",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which control architecture connects sensors directly to actuators via prioritized behavioral layers without an internal world model?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Deliberative (Sense-Plan-Act)",
+            "isCorrect": false
+          },
+          {
+            "text": "Reactive (Subsumption)",
+            "isCorrect": true
+          },
+          {
+            "text": "Hierarchical",
+            "isCorrect": false
+          },
+          {
+            "text": "Cloud-Native",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How many independent spatial coordinates are required to define the pose of a rigid body in 3D Euclidean space?",
+        "points": 1,
+        "options": [
+          {
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "text": "4",
+            "isCorrect": false
+          },
+          {
+            "text": "6",
+            "isCorrect": true
+          },
+          {
+            "text": "8",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary operational distinction between industrial robots and collaborative robots (cobots)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Cobots use hydraulic pistons exclusively",
+            "isCorrect": false
+          },
+          {
+            "text": "Cobots lack real-time controllers",
+            "isCorrect": false
+          },
+          {
+            "text": "Cobots feature force/power limiting allowing cage-free human interaction",
+            "isCorrect": true
+          },
+          {
+            "text": "Cobots cannot perform pick-and-place tasks",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is an end-effector?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The primary mounting base bolted to the floor",
+            "isCorrect": false
+          },
+          {
+            "text": "The tool or gripper attached to the robot's final wrist joint",
+            "isCorrect": true
+          },
+          {
+            "text": "The real-time operating system kernel",
+            "isCorrect": false
+          },
+          {
+            "text": "The feedback encoder mounted on joint 1",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What algorithm enables a mobile robot to build an unknown spatial map while simultaneously tracking its location within it?",
+        "points": 1,
+        "options": [
+          {
+            "text": "PID",
+            "isCorrect": false
+          },
+          {
+            "text": "SLAM",
+            "isCorrect": true
+          },
+          {
+            "text": "D-H Convention",
+            "isCorrect": false
+          },
+          {
+            "text": "Fast Fourier Transform",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What defines the 'work envelope' of a robotic arm?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The maximum electrical wattage drawn at full stall",
+            "isCorrect": false
+          },
+          {
+            "text": "The total 3D spatial volume reachable by the end-effector",
+            "isCorrect": true
+          },
+          {
+            "text": "The shipping container dimensions",
+            "isCorrect": false
+          },
+          {
+            "text": "The thickness of the protective perimeter fencing",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "A SCARA robot typically features what combination of kinematic joints?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Three prismatic joints",
+            "isCorrect": false
+          },
+          {
+            "text": "Six revolute joints",
+            "isCorrect": false
+          },
+          {
+            "text": "Parallel vertical revolute axes with a prismatic stroke axis",
+            "isCorrect": true
+          },
+          {
+            "text": "Pure spherical ball-and-socket joints",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 33,
+    "title": "L2 — Actuators and Drives Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "How do Brushless DC (BLDC) motors differ structurally from Brushed DC motors?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Permanent magnets sit on the rotor; phase switching is handled electronically",
+            "isCorrect": true
+          },
+          {
+            "text": "Windings sit on the rotor and contact carbon brushes",
+            "isCorrect": false
+          },
+          {
+            "text": "They run directly off line-voltage AC without motor drivers",
+            "isCorrect": false
+          },
+          {
+            "text": "They lack a stator",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What standard electronic circuit topology is used to reverse DC motor polarity and control direction?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Wheatstone Bridge",
+            "isCorrect": false
+          },
+          {
+            "text": "H-Bridge",
+            "isCorrect": true
+          },
+          {
+            "text": "Colpitts Oscillator",
+            "isCorrect": false
+          },
+          {
+            "text": "Buck-Boost Converter",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What technique enables a stepper motor to achieve smoother motion and higher angular resolution than its native full-step rating?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Field-Oriented Control (FOC)",
+            "isCorrect": false
+          },
+          {
+            "text": "Microstepping",
+            "isCorrect": true
+          },
+          {
+            "text": "Direct-drive commutation",
+            "isCorrect": false
+          },
+          {
+            "text": "Back-EMF dampening",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why are hydraulic actuators preferred over electric motors in heavy earthmoving robotics?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They produce no heat",
+            "isCorrect": false
+          },
+          {
+            "text": "They require no pumps or valves",
+            "isCorrect": false
+          },
+          {
+            "text": "They possess exceptional power and force density",
+            "isCorrect": true
+          },
+          {
+            "text": "Compressed air is highly elastic",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In a closed-loop servomotor system, what component provides positional feedback to the onboard error amplifier?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Flyback diode",
+            "isCorrect": false
+          },
+          {
+            "text": "Rotary encoder or potentiometer",
+            "isCorrect": true
+          },
+          {
+            "text": "Step/Direction pulse generator",
+            "isCorrect": false
+          },
+          {
+            "text": "Snubber circuit",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is a key physical limitation of pneumatic actuators when attempting precise intermediate positioning?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Incompressible fluid media",
+            "isCorrect": false
+          },
+          {
+            "text": "High compressibility of air creating compliance/springiness",
+            "isCorrect": true
+          },
+          {
+            "text": "Low actuation speeds",
+            "isCorrect": false
+          },
+          {
+            "text": "Electrical interference from brushes",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does Pulse-Width Modulation (PWM) modulate the speed of a DC motor?",
+        "points": 1,
+        "options": [
+          {
+            "text": "By altering the AC grid frequency continuously",
+            "isCorrect": false
+          },
+          {
+            "text": "By rapidly switching a fixed DC bus voltage and varying the duty cycle",
+            "isCorrect": true
+          },
+          {
+            "text": "By physically shifting the stator brush alignment",
+            "isCorrect": false
+          },
+          {
+            "text": "By inserting variable resistors in series",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which gear transmission is commonly chosen for robotic joints due to its near-zero mechanical backlash and high gear reduction ratio?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Spur gears",
+            "isCorrect": false
+          },
+          {
+            "text": "Strain-wave (Harmonic) gearing",
+            "isCorrect": true
+          },
+          {
+            "text": "Bevel gears",
+            "isCorrect": false
+          },
+          {
+            "text": "Worm drive without lubrication",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is motor 'holding torque'?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Torque generated at maximum rated RPM",
+            "isCorrect": false
+          },
+          {
+            "text": "Torque required to backdrive a disconnected motor",
+            "isCorrect": false
+          },
+          {
+            "text": "Maximum static external torque a powered motor can resist without rotating",
+            "isCorrect": true
+          },
+          {
+            "text": "Torque lost to internal bearing friction",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Field-Oriented Control (FOC) optimizes brushless motor efficiency by maintaining which angle between stator and rotor magnetic fields?",
+        "points": 1,
+        "options": [
+          {
+            "text": "0°",
+            "isCorrect": false
+          },
+          {
+            "text": "45°",
+            "isCorrect": false
+          },
+          {
+            "text": "90°",
+            "isCorrect": true
+          },
+          {
+            "text": "180°",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 34,
+    "title": "L3 — Control Components Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "Which compute platform is optimized for hard real-time, deterministic low-level operations like reading quadrature encoder pulses?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Microcontroller Unit (MCU)",
+            "isCorrect": true
+          },
+          {
+            "text": "General-purpose Single-Board Computer running desktop Linux",
+            "isCorrect": false
+          },
+          {
+            "text": "Cloud-hosted virtual machine",
+            "isCorrect": false
+          },
+          {
+            "text": "Web server",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In a PID controller, which term is responsible for eliminating persistent steady-state tracking offset?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Proportional (Kp)",
+            "isCorrect": false
+          },
+          {
+            "text": "Integral (Ki)",
+            "isCorrect": true
+          },
+          {
+            "text": "Derivative (Kd)",
+            "isCorrect": false
+          },
+          {
+            "text": "Feedforward (Kff)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary role of the Derivative (Kd) term in a PID feedback loop?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Accumulating past historical errors",
+            "isCorrect": false
+          },
+          {
+            "text": "Dampening oscillations and anticipating rate of error change",
+            "isCorrect": true
+          },
+          {
+            "text": "Supplying steady-state bias",
+            "isCorrect": false
+          },
+          {
+            "text": "Eliminating sensor noise",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What distinguishes an open-loop control system from a closed-loop system?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Closed-loop systems lack microcontrollers",
+            "isCorrect": false
+          },
+          {
+            "text": "Open-loop systems utilize negative feedback",
+            "isCorrect": false
+          },
+          {
+            "text": "Open-loop systems do not measure or feed back output state to correct input commands",
+            "isCorrect": true
+          },
+          {
+            "text": "Closed-loop systems cannot suffer from instability",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which component translates high-voltage/high-current power to motors while keeping logic circuits isolated?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Operational amplifier (Op-Amp)",
+            "isCorrect": false
+          },
+          {
+            "text": "Gate driver / Motor drive module with optocouplers",
+            "isCorrect": true
+          },
+          {
+            "text": "Analog-to-Digital Converter (ADC)",
+            "isCorrect": false
+          },
+          {
+            "text": "Resistor ladder",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What risk arises when closed-loop sensor feedback experiences excessive latency or phase lag?",
+        "points": 1,
+        "options": [
+          {
+            "text": "System instability, oscillation, and mechanical resonance",
+            "isCorrect": true
+          },
+          {
+            "text": "Instantaneous drop in motor resistance",
+            "isCorrect": false
+          },
+          {
+            "text": "Automatic conversion to open-loop mode",
+            "isCorrect": false
+          },
+          {
+            "text": "Complete loss of actuator power",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What type of feedback maintains stable setpoints by opposing system divergence?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Positive feedback",
+            "isCorrect": false
+          },
+          {
+            "text": "Negative feedback",
+            "isCorrect": true
+          },
+          {
+            "text": "Feedforward latching",
+            "isCorrect": false
+          },
+          {
+            "text": "Open feedback",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which deterministic industrial bus protocol is widely used to connect multi-joint robotic drives with sub-millisecond cycle times?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Standard HTTP/REST",
+            "isCorrect": false
+          },
+          {
+            "text": "EtherCAT",
+            "isCorrect": true
+          },
+          {
+            "text": "Bluetooth Low Energy",
+            "isCorrect": false
+          },
+          {
+            "text": "I2C over 10 meters",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary function of an Analog-to-Digital Converter (ADC) in a robotic controller?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Converts PWM pulses into pure sine waves",
+            "isCorrect": false
+          },
+          {
+            "text": "Converts continuous analog voltage signals from sensors into discrete digital values",
+            "isCorrect": true
+          },
+          {
+            "text": "Steps down high battery voltages to 5V DC",
+            "isCorrect": false
+          },
+          {
+            "text": "Controls the direction of an H-bridge",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "A stepper motor skipping steps under excessive external load is an example of a failure in which type of control scheme?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Open-loop control",
+            "isCorrect": true
+          },
+          {
+            "text": "Fully closed-loop servo control",
+            "isCorrect": false
+          },
+          {
+            "text": "Cascaded PID control",
+            "isCorrect": false
+          },
+          {
+            "text": "Sliding mode control",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 35,
+    "title": "L4 — Control Software 1 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "Why are standard desktop operating systems often unsuitable for low-level robot joint control loops?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They do not support C or C++",
+            "isCorrect": false
+          },
+          {
+            "text": "They lack hard real-time determinism and introduce unpredictable thread preemption latency",
+            "isCorrect": true
+          },
+          {
+            "text": "They cannot execute math equations",
+            "isCorrect": false
+          },
+          {
+            "text": "They require high electrical current to operate",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In robot motion programming, what characterizes Joint (Point-to-Point / PTP) motion?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The tool center point follows a straight line in Cartesian space",
+            "isCorrect": false
+          },
+          {
+            "text": "All joints interpolate simultaneously, resulting in a curved path for the end-effector",
+            "isCorrect": true
+          },
+          {
+            "text": "Only one single joint moves at a time",
+            "isCorrect": false
+          },
+          {
+            "text": "The robot operates without inverse kinematics checks",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary advantage of an S-Curve velocity profile over a standard Trapezoidal profile?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It limits jerk by providing continuous acceleration ramps",
+            "isCorrect": true
+          },
+          {
+            "text": "It requires less processing memory",
+            "isCorrect": false
+          },
+          {
+            "text": "It reaches maximum speed instantly",
+            "isCorrect": false
+          },
+          {
+            "text": "It eliminates the deceleration phase entirely",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What coordinate system is anchored directly to the tool tip or gripper of the robot?",
+        "points": 1,
+        "options": [
+          {
+            "text": "World Frame",
+            "isCorrect": false
+          },
+          {
+            "text": "Base Frame",
+            "isCorrect": false
+          },
+          {
+            "text": "Tool Center Point (TCP) Frame",
+            "isCorrect": true
+          },
+          {
+            "text": "Inertial Reference Frame",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Forward Kinematics (FK) calculates which of the following?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Actuator currents from joint speeds",
+            "isCorrect": false
+          },
+          {
+            "text": "End-effector pose from known joint angles",
+            "isCorrect": true
+          },
+          {
+            "text": "Joint angles from Cartesian target coordinates",
+            "isCorrect": false
+          },
+          {
+            "text": "Motor temperatures over time",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary challenge when solving Inverse Kinematics (IK) for a 6-DoF articulated arm?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Solutions are non-linear, non-unique, and may encounter kinematic singularities",
+            "isCorrect": true
+          },
+          {
+            "text": "It always produces a single linear equation",
+            "isCorrect": false
+          },
+          {
+            "text": "It cannot be solved numerically",
+            "isCorrect": false
+          },
+          {
+            "text": "It requires reading accelerometer values",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does a feedforward control component improve tracking performance during aggressive motions?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It calculates errors only after the motion has finished",
+            "isCorrect": false
+          },
+          {
+            "text": "It predicts required torque using dynamic models before tracking error accumulates",
+            "isCorrect": true
+          },
+          {
+            "text": "It continuously increases integral gain",
+            "isCorrect": false
+          },
+          {
+            "text": "It reduces sensor sampling frequency",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What architectural pattern structures robot high-level logic into reactive, hierarchical execution trees?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Linear scripts",
+            "isCorrect": false
+          },
+          {
+            "text": "Behavior Trees",
+            "isCorrect": true
+          },
+          {
+            "text": "Monolithic while-loops",
+            "isCorrect": false
+          },
+          {
+            "text": "Static look-up tables",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary drawback of a pure proportional (P) feedback controller when opposing a constant gravitational load?",
+        "points": 1,
+        "options": [
+          {
+            "text": "High-frequency phase jitter",
+            "isCorrect": false
+          },
+          {
+            "text": "Persistent steady-state error",
+            "isCorrect": true
+          },
+          {
+            "text": "Instantaneous sensor saturation",
+            "isCorrect": false
+          },
+          {
+            "text": "Reversal of joint travel direction",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In robot control loops, what metric describes the time required for a dynamic response to settle within a designated error band?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Rise time",
+            "isCorrect": false
+          },
+          {
+            "text": "Settling time",
+            "isCorrect": true
+          },
+          {
+            "text": "Latency margin",
+            "isCorrect": false
+          },
+          {
+            "text": "Deadband window",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 37,
+    "title": "L5 — Control Software 2 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "How does Model Predictive Control (MPC) formulate control outputs at each discrete time step?",
+        "points": 1,
+        "options": [
+          {
+            "text": "By training an offline neural network without dynamic equations",
+            "isCorrect": false
+          },
+          {
+            "text": "By solving a constrained optimization problem over a finite prediction horizon using an internal model",
+            "isCorrect": true
+          },
+          {
+            "text": "By executing standard bang-bang switching logic",
+            "isCorrect": false
+          },
+          {
+            "text": "By tuning static PID gains heuristically",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In collaborative robotics, what control strategy models the robot’s interaction dynamics as a virtual spring-damper system?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Bang-Bang control",
+            "isCorrect": false
+          },
+          {
+            "text": "Impedance control",
+            "isCorrect": true
+          },
+          {
+            "text": "Direct joint kinematic inversion",
+            "isCorrect": false
+          },
+          {
+            "text": "Open-loop step indexing",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary mathematical purpose of an Extended Kalman Filter (EKF) in robotic software?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Compressing video feeds for transmission",
+            "isCorrect": false
+          },
+          {
+            "text": "Fusing noisy sensor measurements to estimate true system states across non-linear dynamics",
+            "isCorrect": true
+          },
+          {
+            "text": "Inverting non-square Jacobian matrices",
+            "isCorrect": false
+          },
+          {
+            "text": "Converting Euler angles to quaternions",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the key difference between a path and a trajectory?",
+        "points": 1,
+        "options": [
+          {
+            "text": "A path is 2D; a trajectory is 3D",
+            "isCorrect": false
+          },
+          {
+            "text": "A trajectory is a path parameterized with explicit time, velocity, and acceleration profiles",
+            "isCorrect": true
+          },
+          {
+            "text": "A path considers dynamics; a trajectory considers only geometry",
+            "isCorrect": false
+          },
+          {
+            "text": "Paths are used for manipulators; trajectories are used exclusively for rovers",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why are quintic splines (5th degree) preferred over cubic splines (3rd degree) for trajectory generation?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They eliminate all computation overhead",
+            "isCorrect": false
+          },
+          {
+            "text": "They provide continuous acceleration boundary conditions, preventing step changes in acceleration",
+            "isCorrect": true
+          },
+          {
+            "text": "They run in open-loop mode",
+            "isCorrect": false
+          },
+          {
+            "text": "They require fewer waypoints to specify orientation",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In hard real-time systems, what occurs when a thread misses its execution deadline?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The OS drops the frame and catches up later without consequence",
+            "isCorrect": false
+          },
+          {
+            "text": "The system is considered to have failed, potentially compromising physical safety",
+            "isCorrect": true
+          },
+          {
+            "text": "CPU clock speed automatically doubles",
+            "isCorrect": false
+          },
+          {
+            "text": "Memory paging increases",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which ROS 2 communication primitive is best suited for long-running, non-blocking tasks that provide periodic progress feedback and can be cancelled?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Topics",
+            "isCorrect": false
+          },
+          {
+            "text": "Services",
+            "isCorrect": false
+          },
+          {
+            "text": "Actions",
+            "isCorrect": true
+          },
+          {
+            "text": "Parameters",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What major architectural improvement distinguishes ROS 2 from ROS 1?",
+        "points": 1,
+        "options": [
+          {
+            "text": "ROS 2 replaces DDS with HTTP",
+            "isCorrect": false
+          },
+          {
+            "text": "ROS 2 removes the centralized master node (roscore) in favor of decentralized DDS discovery",
+            "isCorrect": true
+          },
+          {
+            "text": "ROS 2 supports only Python scripting",
+            "isCorrect": false
+          },
+          {
+            "text": "ROS 2 drops real-time control compatibility",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In MoveIt 2 and Open Motion Planning Library (OMPL), what algorithm family plans paths by randomly growing search trees through free configuration space?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Discrete Dijkstra",
+            "isCorrect": false
+          },
+          {
+            "text": "Rapidly-exploring Random Trees (RRT / RRT*)",
+            "isCorrect": true
+          },
+          {
+            "text": "Runge-Kutta 4th Order",
+            "isCorrect": false
+          },
+          {
+            "text": "Fast Fourier Transform",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What file format standard is widely used in ROS to model the kinematic and visual properties of a robot?",
+        "points": 1,
+        "options": [
+          {
+            "text": "URDF (Unified Robot Description Format)",
+            "isCorrect": true
+          },
+          {
+            "text": "JSON-LD",
+            "isCorrect": false
+          },
+          {
+            "text": "STEP",
+            "isCorrect": false
+          },
+          {
+            "text": "DXF",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 38,
+    "title": "L6 — Sensors 1 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What type of sensor measures environmental phenomena outside the robot's physical body?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Proprioceptive",
+            "isCorrect": false
+          },
+          {
+            "text": "Exteroceptive",
+            "isCorrect": true
+          },
+          {
+            "text": "Intrinsic",
+            "isCorrect": false
+          },
+          {
+            "text": "Somatosensory",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does an incremental optical encoder detect the direction of joint rotation?",
+        "points": 1,
+        "options": [
+          {
+            "text": "By measuring the change in operating voltage amplitude",
+            "isCorrect": false
+          },
+          {
+            "text": "By evaluating the relative phase shift (typically 90 deg) between Channel A and Channel B quadrature pulses",
+            "isCorrect": true
+          },
+          {
+            "text": "By switching between infrared and ultraviolet LEDs",
+            "isCorrect": false
+          },
+          {
+            "text": "By reading an absolute binary Gray code track",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary operational advantage of an absolute encoder over an incremental encoder?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Lower manufacturing cost",
+            "isCorrect": false
+          },
+          {
+            "text": "Immediate knowledge of true physical joint position upon power-up without a homing routine",
+            "isCorrect": true
+          },
+          {
+            "text": "Immunity to electromagnetic interference",
+            "isCorrect": false
+          },
+          {
+            "text": "Infinite rotational speeds",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why do ultrasonic distance sensors often produce inaccurate readings against surfaces angled obliquely to the beam?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The sound waves penetrate solid objects completely",
+            "isCorrect": false
+          },
+          {
+            "text": "Specular reflection deflects the acoustic pulse away from the receiver transducer",
+            "isCorrect": true
+          },
+          {
+            "text": "The speed of sound drops to zero",
+            "isCorrect": false
+          },
+          {
+            "text": "Optical ambient noise blinds the receiver",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which proximity sensor operates using high-frequency eddy-current damping and detects only metallic targets?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Capacitive proximity sensor",
+            "isCorrect": false
+          },
+          {
+            "text": "Inductive proximity sensor",
+            "isCorrect": true
+          },
+          {
+            "text": "Ultrasonic proximity sensor",
+            "isCorrect": false
+          },
+          {
+            "text": "Photoelectric diffuse sensor",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does a bonded foil strain gauge translate mechanical deformation into an electrical signal?",
+        "points": 1,
+        "options": [
+          {
+            "text": "By changing electrical resistance as the foil pattern elongates or compresses",
+            "isCorrect": true
+          },
+          {
+            "text": "By generating spontaneous thermoelectric voltages",
+            "isCorrect": false
+          },
+          {
+            "text": "By emitting variable photon frequencies",
+            "isCorrect": false
+          },
+          {
+            "text": "By altering magnetic field polarity",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What electrical circuit topology is standard for measuring the minute resistance shifts of strain gauges?",
+        "points": 1,
+        "options": [
+          {
+            "text": "H-Bridge",
+            "isCorrect": false
+          },
+          {
+            "text": "Wheatstone Bridge",
+            "isCorrect": true
+          },
+          {
+            "text": "R-2R Ladder",
+            "isCorrect": false
+          },
+          {
+            "text": "Schmitt Trigger",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Where is a 6-DoF force/torque sensor typically mounted on an industrial manipulator?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Underneath the stationary base mounting plate",
+            "isCorrect": false
+          },
+          {
+            "text": "Between the robot's wrist mounting flange and the end-effector",
+            "isCorrect": true
+          },
+          {
+            "text": "Inside the motor casing of Joint 1",
+            "isCorrect": false
+          },
+          {
+            "text": "Directly on the control cabinet door",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What term defines the smallest detectable increment of physical change that a sensor can measure?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Accuracy",
+            "isCorrect": false
+          },
+          {
+            "text": "Repeatability",
+            "isCorrect": false
+          },
+          {
+            "text": "Resolution",
+            "isCorrect": true
+          },
+          {
+            "text": "Hysteresis",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What causes sensor 'drift' over extended operational periods?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Changes in ambient temperature, material relaxation, and component aging",
+            "isCorrect": true
+          },
+          {
+            "text": "Excessive processor bus speeds",
+            "isCorrect": false
+          },
+          {
+            "text": "Over-filtering via low-pass digital filters",
+            "isCorrect": false
+          },
+          {
+            "text": "Inverting quadrature channels",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 39,
+    "title": "L7 — Kinematics 1 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What is the fundamental focus of robot kinematics?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Calculating actuator torques under high-speed dynamic acceleration",
+            "isCorrect": false
+          },
+          {
+            "text": "Studying the geometry of motion without regard to forces or masses",
+            "isCorrect": true
+          },
+          {
+            "text": "Designing power distribution boards for microcontrollers",
+            "isCorrect": false
+          },
+          {
+            "text": "Formulating thermal dissipation limits of gearboxes",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which mechanical joint type provides linear sliding translation along an axis?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Revolute (R)",
+            "isCorrect": false
+          },
+          {
+            "text": "Prismatic (P)",
+            "isCorrect": true
+          },
+          {
+            "text": "Spherical (S)",
+            "isCorrect": false
+          },
+          {
+            "text": "Universal (U)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the mathematical definition of a 3x3 Rotation Matrix belonging to SO(3)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "R^T = -R and det(R) = 0",
+            "isCorrect": false
+          },
+          {
+            "text": "R^T = R^(-1) and det(R) = +1",
+            "isCorrect": true
+          },
+          {
+            "text": "R = R^T and Tr(R) = 0",
+            "isCorrect": false
+          },
+          {
+            "text": "det(R) = -1",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What mathematical limitation affects minimal three-parameter angular representations like Euler angles?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Non-integrable position limits",
+            "isCorrect": false
+          },
+          {
+            "text": "Gimbal lock (representation singularity)",
+            "isCorrect": true
+          },
+          {
+            "text": "Infinite quaternion norms",
+            "isCorrect": false
+          },
+          {
+            "text": "Imaginary matrix eigenvalues",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How many parameters compose a unit quaternion, and what algebraic condition must they satisfy?",
+        "points": 1,
+        "options": [
+          {
+            "text": "3 parameters, sum equals zero",
+            "isCorrect": false
+          },
+          {
+            "text": "4 parameters, Euclidean norm equals 1",
+            "isCorrect": true
+          },
+          {
+            "text": "6 parameters, orthogonal determinants",
+            "isCorrect": false
+          },
+          {
+            "text": "9 parameters, skew-symmetric",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the dimension of a standard Homogeneous Transformation Matrix (SE(3))?",
+        "points": 1,
+        "options": [
+          {
+            "text": "3x3",
+            "isCorrect": false
+          },
+          {
+            "text": "3x1",
+            "isCorrect": false
+          },
+          {
+            "text": "4x4",
+            "isCorrect": true
+          },
+          {
+            "text": "6x6",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How are successive spatial coordinate frame transformations compounded together in a kinematic chain?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Matrix addition",
+            "isCorrect": false
+          },
+          {
+            "text": "Sequential matrix multiplication in sequence order",
+            "isCorrect": true
+          },
+          {
+            "text": "Computing matrix determinants",
+            "isCorrect": false
+          },
+          {
+            "text": "Dot products of position vectors",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In the classical Denavit-Hartenberg (D-H) convention, how many geometric parameters are used to relate adjacent links?",
+        "points": 1,
+        "options": [
+          {
+            "text": "2",
+            "isCorrect": false
+          },
+          {
+            "text": "4",
+            "isCorrect": true
+          },
+          {
+            "text": "6",
+            "isCorrect": false
+          },
+          {
+            "text": "8",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In D-H parameters, what does the link length (a_i) represent?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The rotation angle about the Z_i axis",
+            "isCorrect": false
+          },
+          {
+            "text": "The distance along the X_i axis from Z_{i-1} to Z_i",
+            "isCorrect": true
+          },
+          {
+            "text": "The linear offset along the Z_{i-1} axis",
+            "isCorrect": false
+          },
+          {
+            "text": "The mass of link i",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why does solving Forward Kinematics (FK) always yield a unique, deterministic Cartesian pose?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Forward kinematics requires numerical optimization",
+            "isCorrect": false
+          },
+          {
+            "text": "Direct trigonometric matrix multiplication maps known joint states to a single physical configuration",
+            "isCorrect": true
+          },
+          {
+            "text": "Singularities prevent alternative solutions",
+            "isCorrect": false
+          },
+          {
+            "text": "Arms can only move along Cartesian lines",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 40,
+    "title": "L8 — Kinematics 2 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What is the objective of Inverse Kinematics (IK)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Calculate joint angles required to position the end-effector at a desired Cartesian pose",
+            "isCorrect": true
+          },
+          {
+            "text": "Calculate Cartesian coordinates from known encoder pulses",
+            "isCorrect": false
+          },
+          {
+            "text": "Measure motor current draw during acceleration",
+            "isCorrect": false
+          },
+          {
+            "text": "Filter noisy IMU orientation vectors",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why does an industrial 6-DoF articulated arm often possess multiple inverse kinematic solutions for a single pose?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Actuators have varying gear ratios",
+            "isCorrect": false
+          },
+          {
+            "text": "Different arm configurations (elbow-up vs elbow-down, wrist flipped) reach the same pose",
+            "isCorrect": true
+          },
+          {
+            "text": "Encoders lose resolution over distance",
+            "isCorrect": false
+          },
+          {
+            "text": "Forward kinematics is non-linear",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "According to Pieper's Criterion, a 6-DoF serial arm has a closed-form analytical IK solution if it satisfies which condition?",
+        "points": 1,
+        "options": [
+          {
+            "text": "All links must have identical length",
+            "isCorrect": false
+          },
+          {
+            "text": "Three consecutive joint axes intersect at a single common point (spherical wrist)",
+            "isCorrect": true
+          },
+          {
+            "text": "All joints must be prismatic",
+            "isCorrect": false
+          },
+          {
+            "text": "The base joint must be locked at 0 deg",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What kinematic configuration characterizes a SCARA manipulator?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Three orthogonal linear axes (PPP)",
+            "isCorrect": false
+          },
+          {
+            "text": "Parallel vertical revolute axes combined with a vertical prismatic axis (RRRP)",
+            "isCorrect": true
+          },
+          {
+            "text": "Six rotational axes arranged spherically (RRRRRR)",
+            "isCorrect": false
+          },
+          {
+            "text": "Hexapod parallel Stewart platform",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What occurs when a robotic arm passes through a kinematic singularity?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Motor holding torque drops to zero",
+            "isCorrect": false
+          },
+          {
+            "text": "The arm loses one or more degrees of freedom, and inverted velocities can approach infinity",
+            "isCorrect": true
+          },
+          {
+            "text": "The controller switches to open-loop mode automatically",
+            "isCorrect": false
+          },
+          {
+            "text": "The tool center point detaches",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What specific alignment causes an industrial arm's 'wrist singularity'?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Joint 1 reaches its physical hard stop",
+            "isCorrect": false
+          },
+          {
+            "text": "The axes of Joint 4 and Joint 6 become collinear (Joint 5 at 0 deg)",
+            "isCorrect": true
+          },
+          {
+            "text": "The elbow extends to exactly 90 deg",
+            "isCorrect": false
+          },
+          {
+            "text": "The payload exceeds the rated limit",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does Cartesian-space motion (LIN) differ fundamentally from Joint-space motion (PTP)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "LIN motion executes faster because it bypasses the Jacobian",
+            "isCorrect": false
+          },
+          {
+            "text": "LIN requires the end-effector to follow a straight line, necessitating continuous real-time IK solving",
+            "isCorrect": true
+          },
+          {
+            "text": "PTP motion is strictly linear in Cartesian coordinates",
+            "isCorrect": false
+          },
+          {
+            "text": "LIN motion moves only one joint at a time",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In numerical IK, what is the role of the Damped Least Squares (Levenberg-Marquardt) method?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It maximizes operational Cartesian speed",
+            "isCorrect": false
+          },
+          {
+            "text": "It prevents unbounded joint velocity spikes near singularities by introducing a damping factor",
+            "isCorrect": true
+          },
+          {
+            "text": "It converts revolute joints into prismatic joints",
+            "isCorrect": false
+          },
+          {
+            "text": "It eliminates steady-state position offset",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What happens mathematically to the Jacobian matrix at a singular configuration?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It becomes an identity matrix",
+            "isCorrect": false
+          },
+          {
+            "text": "It loses full rank, and its determinant equals zero",
+            "isCorrect": true
+          },
+          {
+            "text": "Its transpose becomes undefined",
+            "isCorrect": false
+          },
+          {
+            "text": "All its elements become imaginary",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which robot arm architecture has a work envelope shaped like a rectangular box?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Cartesian / Gantry robot",
+            "isCorrect": true
+          },
+          {
+            "text": "Articulated anthropomorphic robot",
+            "isCorrect": false
+          },
+          {
+            "text": "Cylindrical robot",
+            "isCorrect": false
+          },
+          {
+            "text": "Delta parallel robot",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 41,
+    "title": "L9 — Differential Motion 1 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What mathematical tool maps joint velocities directly to end-effector spatial velocities?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Inertia Tensor",
+            "isCorrect": false
+          },
+          {
+            "text": "Jacobian Matrix (J)",
+            "isCorrect": true
+          },
+          {
+            "text": "D-H Transformation Table",
+            "isCorrect": false
+          },
+          {
+            "text": "Euler Characteristic",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Differential motion linearizes kinematics over what operational duration?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Across an entire work cycle",
+            "isCorrect": false
+          },
+          {
+            "text": "Over an infinitesimally small interval of time (dt)",
+            "isCorrect": true
+          },
+          {
+            "text": "Strictly when the manipulator is at static rest",
+            "isCorrect": false
+          },
+          {
+            "text": "Only during homing routines",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What components constitute an end-effector's 6D spatial twist vector (v)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "3 linear forces and 3 moments",
+            "isCorrect": false
+          },
+          {
+            "text": "3 linear velocities (vx, vy, vz) and 3 angular velocities (wx, wy, wz)",
+            "isCorrect": true
+          },
+          {
+            "text": "6 joint angles",
+            "isCorrect": false
+          },
+          {
+            "text": "6 encoder pulse frequencies",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "For an n-joint serial arm operating in 3D spatial coordinates, what are the dimensions of its geometric Jacobian?",
+        "points": 1,
+        "options": [
+          {
+            "text": "3x3",
+            "isCorrect": false
+          },
+          {
+            "text": "4x4",
+            "isCorrect": false
+          },
+          {
+            "text": "6xn",
+            "isCorrect": true
+          },
+          {
+            "text": "nxn",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In constructing the geometric Jacobian, what is the angular velocity contribution of a prismatic joint?",
+        "points": 1,
+        "options": [
+          {
+            "text": "z_{i-1}",
+            "isCorrect": false
+          },
+          {
+            "text": "z_{i-1} x (p_e - p_{i-1})",
+            "isCorrect": false
+          },
+          {
+            "text": "0 (Zero vector)",
+            "isCorrect": true
+          },
+          {
+            "text": "Identity matrix",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the linear velocity contribution of a revolute joint?",
+        "points": 1,
+        "options": [
+          {
+            "text": "z_{i-1} x (p_e - p_{i-1})",
+            "isCorrect": true
+          },
+          {
+            "text": "z_{i-1}",
+            "isCorrect": false
+          },
+          {
+            "text": "p_e - p_{i-1}",
+            "isCorrect": false
+          },
+          {
+            "text": "0",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does the Jacobian Transpose relate external contact wrenches (F) to joint torques (tau)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "tau = J^(-1) * F",
+            "isCorrect": false
+          },
+          {
+            "text": "tau = J^T * F",
+            "isCorrect": true
+          },
+          {
+            "text": "tau = F * J",
+            "isCorrect": false
+          },
+          {
+            "text": "tau = (J^T * J)^(-1) * F",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What unit is standard for expressing the joint velocity of a revolute joint?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Meters per second (m/s)",
+            "isCorrect": false
+          },
+          {
+            "text": "Radians per second (rad/s)",
+            "isCorrect": true
+          },
+          {
+            "text": "Newtons (N)",
+            "isCorrect": false
+          },
+          {
+            "text": "Hertz (Hz)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "If an inverse velocity calculation commands joint speeds exceeding hardware capabilities, what must the controller do?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Drop the communication frame",
+            "isCorrect": false
+          },
+          {
+            "text": "Scale trajectory velocities uniformly along the path to maintain the planned geometric contour",
+            "isCorrect": true
+          },
+          {
+            "text": "Switch off the base actuator",
+            "isCorrect": false
+          },
+          {
+            "text": "Invert the Jacobian signs",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "The Principle of Virtual Work proves the duality between which two robotic physical properties?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Joint mass and link length",
+            "isCorrect": false
+          },
+          {
+            "text": "Cartesian velocities and static contact forces/torques",
+            "isCorrect": true
+          },
+          {
+            "text": "Voltage and encoder bit-depth",
+            "isCorrect": false
+          },
+          {
+            "text": "Thermal dissipation and gear friction",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 42,
+    "title": "L10 — Differential Motion 2 Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What distinguishes the Analytical Jacobian from the Geometric Jacobian?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The analytical Jacobian uses motor currents directly",
+            "isCorrect": false
+          },
+          {
+            "text": "The analytical Jacobian differentiates minimal orientation parameters (Euler angles), risking algorithmic singularities",
+            "isCorrect": true
+          },
+          {
+            "text": "The geometric Jacobian cannot be inverted",
+            "isCorrect": false
+          },
+          {
+            "text": "The analytical Jacobian applies only to mobile robots",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In a manipulability ellipsoid, what do the major axes represent?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Directions of maximum static holding force",
+            "isCorrect": false
+          },
+          {
+            "text": "Directions along which the robot generates high Cartesian velocity with modest joint speeds",
+            "isCorrect": true
+          },
+          {
+            "text": "Structural link bending vectors",
+            "isCorrect": false
+          },
+          {
+            "text": "Singularity lines",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "When a manipulator has more degrees of freedom than required for a task (n > 6), what mathematical tool calculates joint velocities?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Standard matrix determinant",
+            "isCorrect": false
+          },
+          {
+            "text": "Moore-Penrose Pseudoinverse",
+            "isCorrect": true
+          },
+          {
+            "text": "D-H parameters table",
+            "isCorrect": false
+          },
+          {
+            "text": "Fast Fourier Transform",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What does the 'null space' of a redundant manipulator allow the control software to accomplish?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Shut down idle actuators to save battery",
+            "isCorrect": false
+          },
+          {
+            "text": "Reconfigure internal arm posture (e.g. avoid obstacles) without disturbing end-effector pose",
+            "isCorrect": true
+          },
+          {
+            "text": "Double the Cartesian velocity of the gripper",
+            "isCorrect": false
+          },
+          {
+            "text": "Run open-loop trajectories safely",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the mathematical condition for an interior singularity in a square 6x6 Jacobian?",
+        "points": 1,
+        "options": [
+          {
+            "text": "det(J) = 0",
+            "isCorrect": true
+          },
+          {
+            "text": "Tr(J) = 1",
+            "isCorrect": false
+          },
+          {
+            "text": "J = J^T",
+            "isCorrect": false
+          },
+          {
+            "text": "rank(J) = 7",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What physical problem occurs if a controller computes inverse differential kinematics near a singularity?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The motors shut off due to under-voltage",
+            "isCorrect": false
+          },
+          {
+            "text": "Joint velocity commands spike toward infinity, causing actuator over-current trips",
+            "isCorrect": true
+          },
+          {
+            "text": "The end-effector reverses direction spontaneously",
+            "isCorrect": false
+          },
+          {
+            "text": "Backlash drops to zero",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What scalar index quantifies how far a manipulator configuration is from a singular state?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Manipulability measure (sqrt(det(J * J^T)))",
+            "isCorrect": true
+          },
+          {
+            "text": "Nyquist stability margin",
+            "isCorrect": false
+          },
+          {
+            "text": "D-H link twist",
+            "isCorrect": false
+          },
+          {
+            "text": "Gear ratio factor",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In Cartesian resolved-rate control, why is a proportional feedback error term added to the nominal target velocity?",
+        "points": 1,
+        "options": [
+          {
+            "text": "To increase gear torque",
+            "isCorrect": false
+          },
+          {
+            "text": "To correct for numerical drift and integration errors over time",
+            "isCorrect": true
+          },
+          {
+            "text": "To bypass the Jacobian inverse calculation",
+            "isCorrect": false
+          },
+          {
+            "text": "To dampen high-frequency encoder noise",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What occurs during an 'elbow singularity'?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The wrist joints align with Joint 1",
+            "isCorrect": false
+          },
+          {
+            "text": "The elbow joint fully straightens (180 deg) or folds flat, losing radial translational capability",
+            "isCorrect": true
+          },
+          {
+            "text": "The gripper motor current drops to zero",
+            "isCorrect": false
+          },
+          {
+            "text": "The arm rotates out of the world frame",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In the acceleration equation v_dot = J*q_ddot + J_dot*q_dot, what physical phenomena does J_dot*q_dot represent?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Static friction",
+            "isCorrect": false
+          },
+          {
+            "text": "Centripetal and Coriolis dynamic accelerations",
+            "isCorrect": true
+          },
+          {
+            "text": "Gravity loading",
+            "isCorrect": false
+          },
+          {
+            "text": "Backlash",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 43,
+    "title": "L11 — Statics & Energy Method Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "Under what operational condition does robotic statics analysis strictly apply?",
+        "points": 1,
+        "options": [
+          {
+            "text": "When joints are accelerating at peak speed",
+            "isCorrect": false
+          },
+          {
+            "text": "When the manipulator is stationary or moving at slow, constant velocities where inertial accelerations are negligible",
+            "isCorrect": true
+          },
+          {
+            "text": "Only when electrical power is disconnected",
+            "isCorrect": false
+          },
+          {
+            "text": "When the robot is running a high-speed welding path",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What does a generalized 6D contact 'wrench' (F) combine?",
+        "points": 1,
+        "options": [
+          {
+            "text": "3 positions and 3 angles",
+            "isCorrect": false
+          },
+          {
+            "text": "3 linear forces (fx, fy, fz) and 3 moments/torques (mx, my, mz)",
+            "isCorrect": true
+          },
+          {
+            "text": "6 joint gear ratios",
+            "isCorrect": false
+          },
+          {
+            "text": "6 motor temperatures",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the vector cross-product equation defining torque (tau) produced by force f acting at lever arm r?",
+        "points": 1,
+        "options": [
+          {
+            "text": "tau = r . f",
+            "isCorrect": false
+          },
+          {
+            "text": "tau = r x f",
+            "isCorrect": true
+          },
+          {
+            "text": "tau = ||r|| / ||f||",
+            "isCorrect": false
+          },
+          {
+            "text": "tau = J . f",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why do joint torques caused by payload weight increase as a robotic arm reaches outward horizontally?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The payload increases in physical mass",
+            "isCorrect": false
+          },
+          {
+            "text": "The perpendicular moment arm from the joint axis to the load increases",
+            "isCorrect": true
+          },
+          {
+            "text": "Friction in the bearings increases with speed",
+            "isCorrect": false
+          },
+          {
+            "text": "Motor voltage drops over distance",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In static equilibrium, what must the sum of all external forces and moments acting on an isolated link equal?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The link's mass moment of inertia",
+            "isCorrect": false
+          },
+          {
+            "text": "Zero (sum f = 0, sum tau = 0)",
+            "isCorrect": true
+          },
+          {
+            "text": "The maximum actuator holding torque",
+            "isCorrect": false
+          },
+          {
+            "text": "The gravity vector g",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the mathematical relationship mapping an external contact wrench (F) at the end-effector to required joint torques (tau)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "tau = J^(-1) * F",
+            "isCorrect": false
+          },
+          {
+            "text": "tau = J^T(q) * F",
+            "isCorrect": true
+          },
+          {
+            "text": "tau = J(q) * F",
+            "isCorrect": false
+          },
+          {
+            "text": "tau = det(J) * F",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What principle states that for a system in equilibrium, the virtual work done by all active forces during an arbitrary virtual displacement equals zero?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Principle of Conservation of Momentum",
+            "isCorrect": false
+          },
+          {
+            "text": "Principle of Virtual Work",
+            "isCorrect": true
+          },
+          {
+            "text": "D’Alembert's Dynamic Law",
+            "isCorrect": false
+          },
+          {
+            "text": "Newton’s Third Law",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How can the joint torques (tau_g) required to balance a robot against gravity be derived using potential energy (V)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "By integrating potential energy over time",
+            "isCorrect": false
+          },
+          {
+            "text": "By calculating the gradient of potential energy with respect to joint coordinates (dV/dq)",
+            "isCorrect": true
+          },
+          {
+            "text": "By setting potential energy equal to kinetic energy",
+            "isCorrect": false
+          },
+          {
+            "text": "By inverting the mass matrix",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In collaborative robots, what software feature uses static gravity torque calculations to allow an operator to float the arm weightlessly?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Gravity compensation",
+            "isCorrect": true
+          },
+          {
+            "text": "Trajectory scaling",
+            "isCorrect": false
+          },
+          {
+            "text": "Resolved-rate position control",
+            "isCorrect": false
+          },
+          {
+            "text": "Electronic gearing",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How is static force equilibrium solved recursively across a multi-link serial robot?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Starting from the base plate and propagating outward to the end-effector",
+            "isCorrect": false
+          },
+          {
+            "text": "Starting from the end-effector with the applied external load and working inward link-by-link to the base",
+            "isCorrect": true
+          },
+          {
+            "text": "By ignoring link weights and computing only tool mass",
+            "isCorrect": false
+          },
+          {
+            "text": "By running numerical Jacobian iterations",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 44,
+    "title": "L12 — Hybrid Position-Force Control Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "Why does pure position control fail when a stiff robotic arm contacts a rigid, unyielding surface?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Small position tracking errors cause the controller to ramp motor torque to maximum, risking mechanical damage",
+            "isCorrect": true
+          },
+          {
+            "text": "The motor drivers lose encoder feedback pulses",
+            "isCorrect": false
+          },
+          {
+            "text": "Position loops shut down automatically on contact",
+            "isCorrect": false
+          },
+          {
+            "text": "The Jacobian matrix becomes singular on impact",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What occurs if pure direct force control is commanded while the robot moves through unconstrained free space?",
+        "points": 1,
+        "options": [
+          {
+            "text": "The arm remains stationary",
+            "isCorrect": false
+          },
+          {
+            "text": "The arm accelerates uncontrollably toward its maximum speed limit trying to establish contact resistance",
+            "isCorrect": true
+          },
+          {
+            "text": "Torque drops to zero",
+            "isCorrect": false
+          },
+          {
+            "text": "The robot switches to Cartesian coordinates",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the fundamental premise of Mason’s Compliance Frame Theory?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Every task space axis can control position and force simultaneously",
+            "isCorrect": false
+          },
+          {
+            "text": "Along any given DoF in task space, a robot can control either position OR force, but never both simultaneously",
+            "isCorrect": true
+          },
+          {
+            "text": "Force control is strictly superior to position control",
+            "isCorrect": false
+          },
+          {
+            "text": "Mechanical stiffness must remain constant across all axes",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In the Raibert-Craig Hybrid Architecture, what mathematical tool partitions tasks into position and force control subspaces?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Diagonal binary selection matrix (S) and its complement (I - S)",
+            "isCorrect": true
+          },
+          {
+            "text": "Denavit-Hartenberg transformation matrix",
+            "isCorrect": false
+          },
+          {
+            "text": "Inertia tensor matrix",
+            "isCorrect": false
+          },
+          {
+            "text": "Damped least-squares inverse",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "If an axis in the selection matrix has a value of s_i = 1, what control mode is active along that axis?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Direct force control",
+            "isCorrect": false
+          },
+          {
+            "text": "Trajectory position control",
+            "isCorrect": true
+          },
+          {
+            "text": "Open-loop coasting",
+            "isCorrect": false
+          },
+          {
+            "text": "Velocity damping",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "During an automated surface polishing task, which control mode is assigned to the axis perpendicular (normal) to the workpiece?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Position control to maintain a fixed geometric height",
+            "isCorrect": false
+          },
+          {
+            "text": "Force control to maintain constant surface contact pressure",
+            "isCorrect": true
+          },
+          {
+            "text": "Open-loop stepping",
+            "isCorrect": false
+          },
+          {
+            "text": "Null-space joint recentering",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How are the separate force and position control wrench outputs merged in the Raibert-Craig architecture before being sent to the actuators?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They are multiplied together",
+            "isCorrect": false
+          },
+          {
+            "text": "They are summed algebraically in task space and transformed via the Jacobian Transpose (tau = J^T * F_total)",
+            "isCorrect": true
+          },
+          {
+            "text": "The controller alternates between them on alternate clock ticks",
+            "isCorrect": false
+          },
+          {
+            "text": "The higher-voltage signal overwrites the lower",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In precision peg-in-hole assembly, how does hybrid control prevent part jamming?",
+        "points": 1,
+        "options": [
+          {
+            "text": "By pushing downward along the hole axis under position/velocity control while regulating lateral contact forces/moments to zero",
+            "isCorrect": true
+          },
+          {
+            "text": "By rotating all joints at maximum RPM",
+            "isCorrect": false
+          },
+          {
+            "text": "By running open-loop trajectory replanning",
+            "isCorrect": false
+          },
+          {
+            "text": "By locking all revolute joints",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What type of indirect force control adjusts reference trajectories in response to measured contact forces?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Admittance control",
+            "isCorrect": true
+          },
+          {
+            "text": "Impedance control",
+            "isCorrect": false
+          },
+          {
+            "text": "Bang-bang control",
+            "isCorrect": false
+          },
+          {
+            "text": "Feedforward acceleration control",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What sensor is central to executing closed-loop hybrid position-force control on an industrial arm?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Single-axis linear potentiometer",
+            "isCorrect": false
+          },
+          {
+            "text": "Multi-axis (6-DoF) wrist force/torque sensor",
+            "isCorrect": true
+          },
+          {
+            "text": "Ultrasonic rangefinder",
+            "isCorrect": false
+          },
+          {
+            "text": "Absolute joint optical encoder",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 45,
+    "title": "L13 — Compliance & End-Effector Design Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What is the relationship between mechanical compliance (C) and mechanical stiffness (k)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They are directly proportional (C = k)",
+            "isCorrect": false
+          },
+          {
+            "text": "Compliance is the reciprocal of stiffness (C = 1 / k)",
+            "isCorrect": true
+          },
+          {
+            "text": "Compliance is stiffness squared",
+            "isCorrect": false
+          },
+          {
+            "text": "They represent independent orthogonal vectors",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the operational advantage of passive mechanical compliance over active software compliance?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Infinite stiffness",
+            "isCorrect": false
+          },
+          {
+            "text": "Zero sensor latency and instantaneous physical response to impact shocks",
+            "isCorrect": true
+          },
+          {
+            "text": "Programmable spring constants via software",
+            "isCorrect": false
+          },
+          {
+            "text": "Higher electrical energy efficiency",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is the primary function of a Remote Center Compliance (RCC) device during peg-in-hole assembly?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It powers motorized finger jaws",
+            "isCorrect": false
+          },
+          {
+            "text": "It projects an elastic center of compliance forward to the tip of the peg, decoupling lateral forces from angular moments",
+            "isCorrect": true
+          },
+          {
+            "text": "It measures contact forces and transmits CAN bus packets",
+            "isCorrect": false
+          },
+          {
+            "text": "It locks the wrist joints rigidly",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What mechanical actuator architecture incorporates an elastic spring between the motor gearbox and the load link to provide shock protection and torque sensing?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Direct-Drive Brushless Motor",
+            "isCorrect": false
+          },
+          {
+            "text": "Series Elastic Actuator (SEA)",
+            "isCorrect": true
+          },
+          {
+            "text": "Stepper Motor with open-loop indexing",
+            "isCorrect": false
+          },
+          {
+            "text": "Rigid Hydraulic Ram",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What is an automated Tool Changer?",
+        "points": 1,
+        "options": [
+          {
+            "text": "A software script that swaps kinematics solvers",
+            "isCorrect": false
+          },
+          {
+            "text": "A mechanical and electrical coupling system that allows a robot to swap end-effectors autonomously",
+            "isCorrect": true
+          },
+          {
+            "text": "A manual wrench used by maintenance technicians",
+            "isCorrect": false
+          },
+          {
+            "text": "An interchangeable motor driver board",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What grasping mechanism relies entirely on surface friction coefficient and clamping normal force to hold a part?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Form-fit (encompassing) grasp",
+            "isCorrect": false
+          },
+          {
+            "text": "Friction grasp",
+            "isCorrect": true
+          },
+          {
+            "text": "Vacuum cup grasp",
+            "isCorrect": false
+          },
+          {
+            "text": "Magnetic latching",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why is a form-fit (encompassing) gripper jaw design often preferred over a flat friction jaw?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It requires higher clamping force",
+            "isCorrect": false
+          },
+          {
+            "text": "It mechanically nests the part geometry, allowing secure transport at lower actuator forces and higher accelerations",
+            "isCorrect": true
+          },
+          {
+            "text": "It works on parts of any arbitrary shape without tooling changes",
+            "isCorrect": false
+          },
+          {
+            "text": "It eliminates the need for pneumatic valves",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which gripper type is optimal for lifting thin, non-porous sheet metal or flat architectural glass panels?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Piezoresistive soft gripper",
+            "isCorrect": false
+          },
+          {
+            "text": "Vacuum / Suction cup gripper",
+            "isCorrect": true
+          },
+          {
+            "text": "Three-jaw mechanical chuck",
+            "isCorrect": false
+          },
+          {
+            "text": "Hydraulic crushing claw",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "When calculating whether an end-effector exceeds wrist payload limits, what parameter must be verified in addition to static mass?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Mass moment of inertia (Ixx, Iyy, Izz) and distance to Center of Mass (CoM)",
+            "isCorrect": true
+          },
+          {
+            "text": "Ambient room temperature",
+            "isCorrect": false
+          },
+          {
+            "text": "Microcontroller clock rate",
+            "isCorrect": false
+          },
+          {
+            "text": "Motor encoder resolution",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why are soft elastomeric grippers uniquely suited for food handling and agricultural harvesting?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They generate thousands of kilonewtons of force",
+            "isCorrect": false
+          },
+          {
+            "text": "Their passive compliance conforms to irregular, delicate shapes without bruising or crushing them",
+            "isCorrect": true
+          },
+          {
+            "text": "They achieve sub-micron repeatability",
+            "isCorrect": false
+          },
+          {
+            "text": "They do not require a fluid or electrical power source",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topicId": 46,
+    "title": "L14 — Non-Holonomic Systems Quiz",
+    "passingScore": 60,
+    "questions": [
+      {
+        "questionText": "What mathematically characterizes a non-holonomic robotic system?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Controllable degrees of freedom equal total degrees of freedom",
+            "isCorrect": false
+          },
+          {
+            "text": "Controllable degrees of freedom are strictly fewer than total degrees of freedom (Controllable DoF < Total DoF)",
+            "isCorrect": true
+          },
+          {
+            "text": "All kinematic constraints are purely algebraic and integrable into position equations",
+            "isCorrect": false
+          },
+          {
+            "text": "The robot can move instantaneously in any arbitrary direction",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which mobile robot chassis is holonomic in planar space?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Differential drive robot with two fixed coaxial wheels",
+            "isCorrect": false
+          },
+          {
+            "text": "Car-like vehicle with Ackermann steering",
+            "isCorrect": false
+          },
+          {
+            "text": "Four-wheel omnidirectional or Mecanum-wheel platform",
+            "isCorrect": true
+          },
+          {
+            "text": "Tractor-trailer transport",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What physical constraint prevents a standard rubber-tired wheel from sliding sideways?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Zero lateral slip condition",
+            "isCorrect": true
+          },
+          {
+            "text": "Pure rolling slip",
+            "isCorrect": false
+          },
+          {
+            "text": "Torsional compliance",
+            "isCorrect": false
+          },
+          {
+            "text": "Minimum turning radius",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why are the velocity constraints on a differential drive robot considered non-holonomic (non-integrable)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They cannot be integrated into algebraic equations involving only coordinates; velocity restrictions do not restrict reachable workspace",
+            "isCorrect": true
+          },
+          {
+            "text": "The wheels experience infinite acceleration",
+            "isCorrect": false
+          },
+          {
+            "text": "The differential equation has no mathematical derivatives",
+            "isCorrect": false
+          },
+          {
+            "text": "The robot cannot rotate in place",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "How does an Ackermann steering mechanism physically differ from a differential drive base?",
+        "points": 1,
+        "options": [
+          {
+            "text": "It cannot reverse direction",
+            "isCorrect": false
+          },
+          {
+            "text": "It separates steering angle linkages from driving traction and is constrained by a minimum turning radius",
+            "isCorrect": true
+          },
+          {
+            "text": "It has no non-holonomic constraints",
+            "isCorrect": false
+          },
+          {
+            "text": "It utilizes Mecanum rollers",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What path-planning algorithm computes optimal paths for non-holonomic car-like robots capable of moving forward and in reverse?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Dubins Paths (forward-only)",
+            "isCorrect": false
+          },
+          {
+            "text": "Reeds-Shepp Curves",
+            "isCorrect": true
+          },
+          {
+            "text": "Dijkstra's Algorithm",
+            "isCorrect": false
+          },
+          {
+            "text": "Breadth-First Search",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "What does Brockett's Condition prove regarding non-holonomic mobile robots?",
+        "points": 1,
+        "options": [
+          {
+            "text": "They cannot navigate around obstacles",
+            "isCorrect": false
+          },
+          {
+            "text": "They cannot be asymptotically stabilized to a target pose using smooth, time-invariant static state feedback",
+            "isCorrect": true
+          },
+          {
+            "text": "They cannot carry payloads exceeding chassis mass",
+            "isCorrect": false
+          },
+          {
+            "text": "They can always turn with zero radius",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "In a differential drive mobile robot with wheel radius r and track width L, what is the formula for forward linear velocity (v)?",
+        "points": 1,
+        "options": [
+          {
+            "text": "v = r * (omega_R - omega_L)",
+            "isCorrect": false
+          },
+          {
+            "text": "v = (r / 2) * (omega_R + omega_L)",
+            "isCorrect": true
+          },
+          {
+            "text": "v = L * (omega_R + omega_L)",
+            "isCorrect": false
+          },
+          {
+            "text": "v = (r / L) * (omega_R * omega_L)",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Which vehicle is an example of an underactuated non-holonomic system that must translate to maintain attitude balance?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Segway / Inverted pendulum balance robot",
+            "isCorrect": true
+          },
+          {
+            "text": "3-axis Cartesian gantry",
+            "isCorrect": false
+          },
+          {
+            "text": "6-DoF Stewart platform",
+            "isCorrect": false
+          },
+          {
+            "text": "Delta pick-and-place robot",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "questionText": "Why can a differential drive robot turn in place with a zero turning radius while an Ackermann vehicle cannot?",
+        "points": 1,
+        "options": [
+          {
+            "text": "Differential drive wheels can rotate in opposite directions at equal speeds",
+            "isCorrect": true
+          },
+          {
+            "text": "Differential drive platforms are fully holonomic",
+            "isCorrect": false
+          },
+          {
+            "text": "Ackermann steering lacks tires",
+            "isCorrect": false
+          },
+          {
+            "text": "Differential drives have no rolling constraints",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+]

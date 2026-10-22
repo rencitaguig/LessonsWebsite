@@ -1,0 +1,122 @@
+[
+  {
+    "topicId": 2,
+    "title": "L15.1 — Robotic Arm Structure Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"What are the two primary physical components used to build the kinematic chain of a robotic arm?","points":1,"options":[{"text":"Pistons and gears","isCorrect":false},{"text":"Links and joints","isCorrect":true},{"text":"Sensors and end-effectors","isCorrect":false},{"text":"Actuators and drivers","isCorrect":false}]},
+      {"questionText":"Which type of joint permits translational sliding motion along a single linear axis?","points":1,"options":[{"text":"Revolute joint","isCorrect":false},{"text":"Spherical joint","isCorrect":false},{"text":"Prismatic joint","isCorrect":true},{"text":"Universal joint","isCorrect":false}]},
+      {"questionText":"What does \"Degrees of Freedom\" (DOF) represent in robotic manipulation?","points":1,"options":[{"text":"The maximum weight a robot can carry","isCorrect":false},{"text":"The total number of motors installed on the robot","isCorrect":false},{"text":"The number of independent parameters required to define its configuration","isCorrect":true},{"text":"The speed at which the robot arm can move through space","isCorrect":false}]},
+      {"questionText":"What defines the \"workspace\" of a robotic arm?","points":1,"options":[{"text":"The physical dimensions of the laboratory floor","isCorrect":false},{"text":"The geometric volume that the robot's end-effector can reach","isCorrect":true},{"text":"The maximum electrical power output of the joint motors","isCorrect":false},{"text":"The surface area of the gripper jaws","isCorrect":false}]},
+      {"questionText":"Which factor directly limits the maximum reachable workspace of a robotic arm?","points":1,"options":[{"text":"Joint limits and physical link lengths","isCorrect":true},{"text":"The thickness of the power supply cables","isCorrect":false},{"text":"The processing speed of the microcontroller","isCorrect":false},{"text":"The programming language used to code the robot","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 3,
+    "title": "L15.2 — Position and Orientation Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"In 3D Cartesian space, how many parameters are required to fully define both the position and orientation of a rigid body?","points":1,"options":[{"text":"3 (3 translation)","isCorrect":false},{"text":"4 (2 translation, 2 rotation)","isCorrect":false},{"text":"6 (3 translation, 3 rotation)","isCorrect":true},{"text":"9 (3 translation, 6 rotation)","isCorrect":false}]},
+      {"questionText":"What is calculated during Forward Kinematics?","points":1,"options":[{"text":"The joint torque required to balance a target load","isCorrect":false},{"text":"The joint angles needed to reach a desired target coordinate","isCorrect":false},{"text":"The Cartesian position and orientation of the tool given known joint angles","isCorrect":true},{"text":"The electrical current drawn by the motor driver","isCorrect":false}]},
+      {"questionText":"What is calculated during Inverse Kinematics (IK)?","points":1,"options":[{"text":"The Cartesian end-effector position from given joint angles","isCorrect":false},{"text":"The required joint angles to place the end-effector at a desired Cartesian target","isCorrect":true},{"text":"The frictional forces between the gripper and the object","isCorrect":false},{"text":"The maximum payload velocity during movement","isCorrect":false}]},
+      {"questionText":"Why might an Inverse Kinematics solver return multiple valid solutions for a single Cartesian pose?","points":1,"options":[{"text":"Because the robot is disconnected from power","isCorrect":false},{"text":"Because multiple joint configurations (e.g., elbow-up vs. elbow-down) can reach the same coordinate","isCorrect":true},{"text":"Because Cartesian space is two-dimensional","isCorrect":false},{"text":"Because revolute joints cannot rotate continuously","isCorrect":false}]},
+      {"questionText":"What occurs when an Inverse Kinematics target is located outside the arm's workspace?","points":1,"options":[{"text":"The robot executes the movement at twice its normal speed","isCorrect":false},{"text":"The IK algorithm produces no valid real mathematical solution","isCorrect":true},{"text":"The end-effector automatically expands to reach the target","isCorrect":false},{"text":"The revolute joints temporarily transform into prismatic joints","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 4,
+    "title": "L15.3 — Joint-Space and Cartesian Motion Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"How is motion executed when commanding a robot in \"Joint-Space\"?","points":1,"options":[{"text":"The tool tip is forced to draw a perfect straight line in 3D space","isCorrect":false},{"text":"Each joint angle is commanded to move directly from its start angle to its target angle","isCorrect":true},{"text":"The controller continuously computes matrix inversions during the motion","isCorrect":false},{"text":"The end-effector remains stationary while the base rotates","isCorrect":false}]},
+      {"questionText":"What is a key characteristic of Cartesian-Space motion planning?","points":1,"options":[{"text":"The end-effector follows a defined trajectory path (e.g., a straight line) in x, y, z space","isCorrect":true},{"text":"It eliminates the need for inverse kinematics calculations","isCorrect":false},{"text":"Individual joint velocities remain completely constant throughout the movement","isCorrect":false},{"text":"It can only be performed on 2-DOF robotic arms","isCorrect":false}]},
+      {"questionText":"Why is Cartesian-Space motion commonly preferred during the final approach of an object insertion task?","points":1,"options":[{"text":"It uses significantly less motor power than joint-space motion","isCorrect":false},{"text":"It allows the tool to move in a straight line, avoiding unexpected lateral collisions","isCorrect":true},{"text":"It prevents the joint motors from generating torque","isCorrect":false},{"text":"It guarantees that joint limits will never be exceeded","isCorrect":false}]},
+      {"questionText":"What is a trajectory in robotic motion control?","points":1,"options":[{"text":"A single static point in Cartesian space","isCorrect":false},{"text":"A planned sequence of positions over time, constrained by velocity and acceleration limits","isCorrect":true},{"text":"The total mechanical weight of the robotic links","isCorrect":false},{"text":"The electrical schematic connecting joint controllers","isCorrect":false}]},
+      {"questionText":"What is a major disadvantage of purely Joint-Space motion when moving near obstacles?","points":1,"options":[{"text":"The tool path in physical space curves and can be difficult to predict visually","isCorrect":true},{"text":"It requires heavy matrix operations on every control loop","isCorrect":false},{"text":"It prevents the arm from reaching its joint limits","isCorrect":false},{"text":"Motors cannot decelerate smoothly at the end of the motion","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 5,
+    "title": "L15.4 — Gripper Mechanisms Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"Which gripper type utilizes two opposing fingers moving in parallel synchronization to clamp flat or box-like objects?","points":1,"options":[{"text":"Vacuum gripper","isCorrect":false},{"text":"Parallel-jaw gripper","isCorrect":true},{"text":"Magnetic gripper","isCorrect":false},{"text":"Soft compliant gripper","isCorrect":false}]},
+      {"questionText":"In what manufacturing scenario is a vacuum/suction gripper typically preferred over a mechanical jaw gripper?","points":1,"options":[{"text":"Handling heavy, smooth, non-porous flat sheet metal or glass panels","isCorrect":true},{"text":"Picking up oily, porous wooden logs","isCorrect":false},{"text":"Precision assembly of micro-screws","isCorrect":false},{"text":"Grasping cylindrical rods along their length","isCorrect":false}]},
+      {"questionText":"What advantage do soft/compliant grippers offer over rigid metal grippers?","points":1,"options":[{"text":"They exert maximum possible crushing force","isCorrect":false},{"text":"They can passively conform to delicate or irregularly shaped items without damaging them","isCorrect":true},{"text":"They require zero electrical power or pneumatic input","isCorrect":false},{"text":"They completely eliminate friction during manipulation","isCorrect":false}]},
+      {"questionText":"Which type of gripper mechanism is restricted strictly to handling ferrous materials?","points":1,"options":[{"text":"Multi-finger articulated hand","isCorrect":false},{"text":"Pneumatic vacuum pad","isCorrect":false},{"text":"Magnetic gripper","isCorrect":true},{"text":"Parallel-jaw gripper","isCorrect":false}]},
+      {"questionText":"Which factor is LEAST critical when selecting an appropriate gripper for a specific application?","points":1,"options":[{"text":"Object mass and surface texture","isCorrect":false},{"text":"Object fragility and shape","isCorrect":false},{"text":"Color of the workspace mounting frame","isCorrect":true},{"text":"Required grip force and actuation speed","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 6,
+    "title": "L15.5 — Grasping and Contact Forces Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"What fundamental equation represents the force due to gravity acting downward on an object of mass 'm'?","points":1,"options":[{"text":"F = m / g","isCorrect":false},{"text":"W = m * g","isCorrect":true},{"text":"F = 1/2 * m * v^2","isCorrect":false},{"text":"W = m * a^2","isCorrect":false}]},
+      {"questionText":"In friction-based grasping, what role does friction play at the contact points?","points":1,"options":[{"text":"It causes the object to rotate out of the grip","isCorrect":false},{"text":"It counteracts downward gravitational force to prevent slippage","isCorrect":true},{"text":"It decreases the required normal force to zero","isCorrect":false},{"text":"It pushes the gripper jaws apart","isCorrect":false}]},
+      {"questionText":"What distinguishes a \"stable grasp\" from an \"unstable grasp\"?","points":1,"options":[{"text":"A stable grasp uses maximum possible force at all times","isCorrect":false},{"text":"A stable grasp prevents unwanted translation, rotation, or slippage under disturbance forces","isCorrect":true},{"text":"An unstable grasp requires no contact forces from the fingers","isCorrect":false},{"text":"A stable grasp only works on perfectly spherical objects","isCorrect":false}]},
+      {"questionText":"Why is applying maximum possible grip force generally considered bad practice in robotic manipulation?","points":1,"options":[{"text":"It degrades motor efficiency and can crush fragile objects","isCorrect":true},{"text":"It reduces friction between the fingers and the object","isCorrect":false},{"text":"It shifts the center of mass outside the robot workspace","isCorrect":false},{"text":"It forces the robot controller into joint-space mode","isCorrect":false}]},
+      {"questionText":"What parameter determines the coefficient of static friction between a gripper finger and an object?","points":1,"options":[{"text":"The speed of the joint actuators","isCorrect":false},{"text":"The surface materials and textures of both contacting bodies","isCorrect":true},{"text":"The length of the primary robot arm link","isCorrect":false},{"text":"The inverse kinematics algorithm chosen","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 7,
+    "title": "L15.6 — Static Equilibrium of the Arm Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"What two vector summation conditions must be satisfied for a system to be in static equilibrium?","points":1,"options":[{"text":"Sum of velocities = 0 and sum of accelerations = 0","isCorrect":false},{"text":"Sum of forces = 0 and sum of torques = 0","isCorrect":true},{"text":"Sum of joint angles = 180 degrees and sum of link lengths = 1 meter","isCorrect":false},{"text":"Sum of potential energy = 0 and sum of kinetic energy = 1","isCorrect":false}]},
+      {"questionText":"How is torque (moment) calculated mathematically when a force is applied perpendicular to a lever arm?","points":1,"options":[{"text":"Torque = Force / Distance","isCorrect":false},{"text":"Torque = Force * Distance","isCorrect":true},{"text":"Torque = Mass * Velocity","isCorrect":false},{"text":"Torque = Force + Distance","isCorrect":false}]},
+      {"questionText":"How does fully extending a robot arm horizontally affect the torque required at the shoulder joint to hold a constant payload?","points":1,"options":[{"text":"Shoulder joint torque decreases to zero","isCorrect":false},{"text":"Shoulder joint torque increases because the lever arm distance increases","isCorrect":true},{"text":"Shoulder joint torque remains completely unchanged","isCorrect":false},{"text":"Shoulder joint torque becomes negative","isCorrect":false}]},
+      {"questionText":"Why must the weight of the robot's own mechanical links be included in static torque analysis?","points":1,"options":[{"text":"Link masses contribute to gravitational torque acting on upstream joint motors","isCorrect":true},{"text":"Link masses convert revolute joints into prismatic joints","isCorrect":false},{"text":"Link masses eliminate friction at the end-effector","isCorrect":false},{"text":"Link masses cancel out external payload forces","isCorrect":false}]},
+      {"questionText":"Where does the gravitational force of a uniform link act in a static free-body diagram?","points":1,"options":[{"text":"At the tip of the end-effector","isCorrect":false},{"text":"At the center of mass of the link","isCorrect":true},{"text":"At the base coordinate frame","isCorrect":false},{"text":"Exclusively at the motor output shaft","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 8,
+    "title": "L15.7 — Position Control and Force Control Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"What is the main objective of a position control system in robotics?","points":1,"options":[{"text":"To regulate the exact force exerted during mechanical contact","isCorrect":false},{"text":"To drive joints or the end-effector toward target spatial coordinates while minimizing position error","isCorrect":true},{"text":"To increase motor temperature","isCorrect":false},{"text":"To measure external electrical resistance","isCorrect":false}]},
+      {"questionText":"In what situation is pure position control problematic or unsafe?","points":1,"options":[{"text":"Moving through free, unobstructed air","isCorrect":false},{"text":"Making contact with a rigid, unyielding surface of uncertain location","isCorrect":true},{"text":"Calibrating encoder home positions","isCorrect":false},{"text":"Executing forward kinematics calculations","isCorrect":false}]},
+      {"questionText":"What is the primary function of force control during grasping?","points":1,"options":[{"text":"To accelerate the arm to top speed","isCorrect":false},{"text":"To measure and regulate contact forces to avoid dropping or damaging objects","isCorrect":true},{"text":"To continuously invert the Jacobian matrix","isCorrect":false},{"text":"To override joint limit switches","isCorrect":false}]},
+      {"questionText":"Which control strategy uses feedback from force/torque sensors to yield softly when meeting mechanical resistance?","points":1,"options":[{"text":"Open-loop step control","isCorrect":false},{"text":"Compliant or impedance force control","isCorrect":true},{"text":"Pure kinematic position control","isCorrect":false},{"text":"Fixed joint angle control","isCorrect":false}]},
+      {"questionText":"In a standard pick-and-place operation, what is the recommended control transition sequence?","points":1,"options":[{"text":"Force control during transit in air, then position control during clamping","isCorrect":false},{"text":"Position control to reach and approach, transitioning to force control upon object contact","isCorrect":true},{"text":"Force control exclusively from start to finish","isCorrect":false},{"text":"Open-loop control throughout the entire trajectory","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 9,
+    "title": "L15.8 — Pick-and-Place Sequence Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"What is the primary purpose of defining a \"pre-grasp\" pose during the approach phase?","points":1,"options":[{"text":"To calibrate the color vision camera","isCorrect":false},{"text":"To position the open gripper safely near the object before final linear alignment","isCorrect":true},{"text":"To turn off the robot joint motors","isCorrect":false},{"text":"To measure ambient room temperature","isCorrect":false}]},
+      {"questionText":"Which phase immediately follows \"Align\" in a standard pick-and-place state sequence?","points":1,"options":[{"text":"Place","isCorrect":false},{"text":"Transfer","isCorrect":false},{"text":"Grasp","isCorrect":true},{"text":"Return","isCorrect":false}]},
+      {"questionText":"Why is vertical \"Lift\" performed before horizontal \"Transfer\" of a grasped workpiece?","points":1,"options":[{"text":"To verify the object is clear of the supporting surface and avoid scraping obstacles","isCorrect":true},{"text":"To reset joint encoders to zero","isCorrect":false},{"text":"To switch from Cartesian space to joint space permanently","isCorrect":false},{"text":"To allow suction cups to fill with ambient air","isCorrect":false}]},
+      {"questionText":"What should every state in a robust pick-and-place state machine explicitly contain?","points":1,"options":[{"text":"An infinite retry loop","isCorrect":false},{"text":"An action, a completion condition, and a failure/timeout condition","isCorrect":true},{"text":"A direct call to forward kinematics only","isCorrect":false},{"text":"A hardcoded delay of at least 60 seconds","isCorrect":false}]},
+      {"questionText":"What is the final operational step in a complete pick-and-place sequence?","points":1,"options":[{"text":"Aligning over target","isCorrect":false},{"text":"Closing gripper jaws","isCorrect":false},{"text":"Lowering, releasing the object, and confirming release","isCorrect":true},{"text":"Lifting payload clear of table","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 10,
+    "title": "L15.9 — Python Simulation Plan Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"In a basic 2D two-link planar arm simulation model, how is each link represented geometrically?","points":1,"options":[{"text":"By a 3D mesh file with textures","isCorrect":false},{"text":"By a rigid line segment of specified scalar length L","isCorrect":true},{"text":"By a point mass at the origin","isCorrect":false},{"text":"By a differential equation of fluid flow","isCorrect":false}]},
+      {"questionText":"In a Python simulation, what trigonometric formulas compute the end-effector coordinate (x, y) for a 2-link arm with joint angles θ1 and θ2?","points":1,"options":[{"text":"x = L1*cos(θ1) + L2*cos(θ1+θ2), y = L1*sin(θ1) + L2*sin(θ1+θ2)","isCorrect":true},{"text":"x = L1*tan(θ1), y = L2*tan(θ2)","isCorrect":false},{"text":"x = L1+L2, y = θ1+θ2","isCorrect":false},{"text":"x = L1*sin(θ1), y = L2*cos(θ2)","isCorrect":false}]},
+      {"questionText":"Which popular Python plotting library is commonly used for rendering 2D kinematic arm visualizations and animations?","points":1,"options":[{"text":"NumPy","isCorrect":false},{"text":"Matplotlib","isCorrect":true},{"text":"Pandas","isCorrect":false},{"text":"SciPy","isCorrect":false}]},
+      {"questionText":"In a simulation workflow, how is \"grasping\" typically modeled when hardware contact physics are omitted?","points":1,"options":[{"text":"By setting link lengths to zero","isCorrect":false},{"text":"By setting object coordinates equal to the end-effector coordinate upon grip trigger","isCorrect":true},{"text":"By clearing all plot axes and ending the program","isCorrect":false},{"text":"By doubling the frame rate of the animation","isCorrect":false}]},
+      {"questionText":"Why is software simulation recommended before running new control code on physical robot arms?","points":1,"options":[{"text":"Simulation guarantees physical motors will never wear out","isCorrect":false},{"text":"Simulation permits safe debugging of kinematics, trajectories, and logic without risk of equipment damage","isCorrect":true},{"text":"Simulation eliminates the need for sensor feedback in real hardware","isCorrect":false},{"text":"Python code cannot run on real hardware controllers","isCorrect":false}]}
+    ]
+  },
+  {
+    "topicId": 11,
+    "title": "L15.10 — Example Program Logic Quiz",
+    "passingScore": 60,
+    "questions": [
+      {"questionText":"What software design pattern is widely used to organize pick-and-place execution logic into distinct operational modes?","points":1,"options":[{"text":"Finite State Machine (FSM)","isCorrect":true},{"text":"Singleton Pattern","isCorrect":false},{"text":"Model-View-Controller (MVC)","isCorrect":false},{"text":"Factory Pattern","isCorrect":false}]},
+      {"questionText":"In state machine logic, what triggers the state transition from \"GRASP\" to \"LIFT\"?","points":1,"options":[{"text":"Timer reaching 24 hours","isCorrect":false},{"text":"Confirmation of a successful grip (e.g., force threshold reached or jaws closed)","isCorrect":true},{"text":"Joint 1 reaching maximum speed","isCorrect":false},{"text":"Program crash error flag","isCorrect":false}]},
+      {"questionText":"Consider the logic: `if state == \"APPROACH\" and at_pregrasp_pose: state = \"GRASP\"`. What is `at_pregrasp_pose`?","points":1,"options":[{"text":"A constant string variable","isCorrect":false},{"text":"A boolean condition checking if position error to pre-grasp pose is within acceptable tolerance","isCorrect":true},{"text":"The maximum torque limit of the wrist motor","isCorrect":false},{"text":"A physical sensor mounted on the gripper tip","isCorrect":false}]},
+      {"questionText":"What is a major software engineering benefit of using a state machine over a long procedural script for robot control?","points":1,"options":[{"text":"It increases program execution speed by 100x","isCorrect":false},{"text":"It makes control flow modular, easy to debug, and simple to handle timeouts or errors","isCorrect":true},{"text":"It automatically converts Python code into hardware wiring diagrams","isCorrect":false},{"text":"It bypasses all inverse kinematics requirements","isCorrect":false}]},
+      {"questionText":"Why are safety timeouts critical inside pick-and-place program state loops?","points":1,"options":[{"text":"To make the robot move faster during production","isCorrect":false},{"text":"To prevent the robot from hanging indefinitely in a state if a target pose or sensor condition fails","isCorrect":true},{"text":"To automatically shut off power every 5 minutes","isCorrect":false},{"text":"To force the robot into Cartesian space mode","isCorrect":false}]}
+    ]
+  }
+]

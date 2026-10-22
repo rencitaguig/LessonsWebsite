@@ -1,0 +1,107 @@
+{
+  "topicId": 25,
+  "title": "Level 3 Quiz — Object-Oriented Python",
+  "passingScore": 60,
+  "questions": [
+    {
+      "questionText": "Which method acts as the instance initializer in a Python class?",
+      "points": 1,
+      "options": [
+        { "text": "__new__()", "isCorrect": false },
+        { "text": "__init__()", "isCorrect": true },
+        { "text": "__create__()", "isCorrect": false },
+        { "text": "__construct__()", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What distinguishes a class attribute from an instance attribute?",
+      "points": 1,
+      "options": [
+        { "text": "Class attributes are private; instance attributes are public", "isCorrect": false },
+        { "text": "Class attributes are shared across all instances; instance attributes belong to an individual instance", "isCorrect": true },
+        { "text": "Class attributes can only hold primitive numbers", "isCorrect": false },
+        { "text": "Instance attributes must be initialized outside the class body", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What implicit first parameter is automatically passed to a method decorated with @classmethod?",
+      "points": 1,
+      "options": [
+        { "text": "self", "isCorrect": false },
+        { "text": "base", "isCorrect": false },
+        { "text": "cls", "isCorrect": true },
+        { "text": "super", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What does Python do when an attribute name is prefixed with double underscores (e.g., __balance)?",
+      "points": 1,
+      "options": [
+        { "text": "Triggers name mangling to prevent accidental overwrites in subclasses", "isCorrect": true },
+        { "text": "Restricts operating-system read access to root users only", "isCorrect": false },
+        { "text": "Makes the variable immutable", "isCorrect": false },
+        { "text": "Automatically creates a REST API endpoint for the property", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What decorator allows a method to be accessed like an attribute while controlling getter and setter logic?",
+      "points": 1,
+      "options": [
+        { "text": "@classmethod", "isCorrect": false },
+        { "text": "@staticmethod", "isCorrect": false },
+        { "text": "@property", "isCorrect": true },
+        { "text": "@abstractmethod", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "How do you delegate a method call to a parent class within a derived child class?",
+      "points": 1,
+      "options": [
+        { "text": "parent.method(self)", "isCorrect": false },
+        { "text": "super().method()", "isCorrect": true },
+        { "text": "base.call(method)", "isCorrect": false },
+        { "text": "inherit().method()", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "Which Python module provides the tools required to define Abstract Base Classes and abstract methods?",
+      "points": 1,
+      "options": [
+        { "text": "types", "isCorrect": false },
+        { "text": "sys", "isCorrect": false },
+        { "text": "abc", "isCorrect": true },
+        { "text": "inspect", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What dunder method must you implement to customize an object's behavior when evaluated by print() or str()?",
+      "points": 1,
+      "options": [
+        { "text": "__repr__", "isCorrect": false },
+        { "text": "__format__", "isCorrect": false },
+        { "text": "__echo__", "isCorrect": false },
+        { "text": "__str__", "isCorrect": true }
+      ]
+    },
+    {
+      "questionText": "Overloading the + operator for a custom class is achieved by defining which special method?",
+      "points": 1,
+      "options": [
+        { "text": "__plus__", "isCorrect": false },
+        { "text": "__sum__", "isCorrect": false },
+        { "text": "__add__", "isCorrect": true },
+        { "text": "__concat__", "isCorrect": false }
+      ]
+    },
+    {
+      "questionText": "What object-oriented concept models a \"has-a\" relationship by assembling classes inside other classes?",
+      "points": 1,
+      "options": [
+        { "text": "Polymorphism", "isCorrect": false },
+        { "text": "Composition", "isCorrect": true },
+        { "text": "Single Inheritance", "isCorrect": false },
+        { "text": "Method Overriding", "isCorrect": false }
+      ]
+    }
+  ]
+}

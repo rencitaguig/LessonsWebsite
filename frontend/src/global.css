@@ -1,0 +1,149 @@
+:root {
+  --font-display:
+    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-display);
+  color: #f8f7fb;
+  background:
+    radial-gradient(ellipse at 88% 84%, rgba(224, 86, 63, 0.2) 0%, transparent 34%),
+    radial-gradient(ellipse at 8% 8%, rgba(63, 86, 127, 0.32) 0%, transparent 36%),
+    radial-gradient(ellipse at 84% 4%, rgba(209, 116, 210, 0.12) 0%, transparent 28%),
+    #101b35;
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+#app-shell,
+#auth-waves {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000' preserveAspectRatio='none' fill='none'%3E%3Cg stroke-width='1.25'%3E%3Cpath stroke='%23e0563f' stroke-opacity='.42' d='M-120 360C170 330 260 220 500 192S900 220 1110 268s360 50 650-84 M-120 384C170 354 280 244 520 216s380 28 590 76 360 50 650-84 M-120 408C170 378 300 268 540 240s360 28 570 76 360 50 650-84 M-120 432C170 402 320 292 560 264s340 28 550 76 360 50 650-84 M-120 456C170 426 340 316 580 288s320 28 530 76 360 50 650-84 M-120 480C170 450 360 340 600 312s300 28 510 76 360 50 650-84'/%3E%3Cpath stroke='%23d174d2' stroke-opacity='.34' d='M-120 372C170 342 270 232 510 204s390 28 600 76 360 50 650-84 M-120 396C170 366 290 256 530 228s370 28 580 76 360 50 650-84 M-120 420C170 390 310 280 550 252s350 28 560 76 360 50 650-84 M-120 444C170 414 330 304 570 276s330 28 540 76 360 50 650-84 M-120 468C170 438 350 328 590 300s310 28 520 76 360 50 650-84'/%3E%3C/g%3E%3Cg stroke='%233f567f' stroke-opacity='.42' stroke-width='1'%3E%3Cpath d='M-100 712C180 644 400 624 650 690s520 134 810 80 290-74 400-30 M-100 736C180 668 400 648 650 714s520 134 810 80 290-74 400-30 M-100 760C180 692 400 672 650 738s520 134 810 80 290-74 400-30 M-100 784C180 716 400 696 650 762s520 134 810 80 290-74 400-30 M-100 808C180 740 400 720 650 786s520 134 810 80 290-74 400-30 M-100 832C180 764 400 744 650 810s520 134 810 80 290-74 400-30'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#app-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(105deg, rgba(65, 38, 83, 0.98) 0%, rgba(84, 45, 92, 0.98) 68%, rgba(171, 67, 59, 0.98) 100%) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 24px rgba(36, 22, 48, 0.16);
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(224, 86, 63, 0.28);
+  color: #242432;
+}
+
+@media (max-width: 640px) {
+  #app-navbar {
+    height: auto !important;
+    min-height: 64px;
+    padding: 8px 12px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 4px !important;
+  }
+
+  #app-navbar > div:first-child {
+    justify-content: center;
+  }
+
+  #app-navbar > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px !important;
+    width: 100%;
+  }
+
+  #app-navbar > div > * {
+    padding: 6px !important;
+  }
+
+  #lessons-page {
+    flex-direction: column !important;
+  }
+
+  #topics-sidebar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    max-height: 32vh;
+    margin: 82px 12px 0;
+    flex-shrink: 0;
+  }
+
+  #topics-main {
+    margin-left: 0 !important;
+  }
+
+  #topics-main > div {
+    padding: 16px !important;
+    padding-top: 12px !important;
+  }
+}
+
+#topics-sidebar ::-webkit-scrollbar {
+  width: 5px;
+}
+#topics-sidebar ::-webkit-scrollbar-track {
+  background: transparent;
+}
+#topics-sidebar ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+#topics-sidebar ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Rich content formatting styles for Lesson Content editor and viewer */
+[contenteditable], .lesson-rich-content { font-family: Arial, Helvetica, sans-serif !important; }
+[contenteditable] h1, .lesson-rich-content h1 { font-size: 1.8em !important; font-weight: 700 !important; margin: 0.6em 0 0.3em !important; color: inherit; }
+[contenteditable] h2, .lesson-rich-content h2 { font-size: 1.5em !important; font-weight: 700 !important; margin: 0.5em 0 0.25em !important; color: inherit; }
+[contenteditable] h3, .lesson-rich-content h3 { font-size: 1.25em !important; font-weight: 600 !important; margin: 0.4em 0 0.2em !important; color: inherit; }
+[contenteditable] h4, .lesson-rich-content h4 { font-size: 1.1em !important; font-weight: 600 !important; margin: 0.3em 0 0.15em !important; color: inherit; }
+[contenteditable] ul, .lesson-rich-content ul { list-style-type: disc !important; padding-left: 28px !important; margin: 0.6em 0 !important; }
+[contenteditable] ol, .lesson-rich-content ol { list-style-type: decimal !important; padding-left: 28px !important; margin: 0.6em 0 !important; }
+[contenteditable] li, .lesson-rich-content li { margin: 0.25em 0 !important; display: list-item !important; }
+[contenteditable] b, [contenteditable] strong, .lesson-rich-content b, .lesson-rich-content strong { font-weight: 700 !important; }
+[contenteditable] i, [contenteditable] em, .lesson-rich-content i, .lesson-rich-content em { font-style: italic !important; }
+[contenteditable] u, .lesson-rich-content u { text-decoration: underline !important; }
+[contenteditable] s, [contenteditable] strike, [contenteditable] del, .lesson-rich-content s { text-decoration: line-through !important; }
+[contenteditable] sup, .lesson-rich-content sup { vertical-align: super !important; font-size: 0.75em !important; line-height: 0 !important; }
+[contenteditable] sub, .lesson-rich-content sub { vertical-align: sub !important; font-size: 0.75em !important; line-height: 0 !important; }
+[contenteditable] table, .lesson-rich-content table { border-collapse: collapse !important; width: 100% !important; margin: 0.8em 0 !important; }
+[contenteditable] th, [contenteditable] td, .lesson-rich-content th, .lesson-rich-content td { border: 1px solid #94a3b8 !important; padding: 6px 10px !important; text-align: left !important; }
+[contenteditable] th, .lesson-rich-content th { background-color: #f1f5f9 !important; font-weight: 600 !important; }
+[contenteditable] blockquote, .lesson-rich-content blockquote { border-left: 3px solid #94a3b8 !important; padding-left: 12px !important; margin: 0.6em 0 !important; color: #475569 !important; }
+[contenteditable] code, .lesson-rich-content code { background-color: #f1f5f9 !important; padding: 2px 5px !important; border-radius: 4px !important; font-family: monospace !important; font-size: 0.9em !important; }
+[contenteditable] p, .lesson-rich-content p { margin: 0.35em 0; }
+
+.lesson-rich-content a {
+  color: #a84bab;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}

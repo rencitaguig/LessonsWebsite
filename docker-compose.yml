@@ -1,0 +1,45 @@
+name: lessonswebsite-clean
+
+services:
+  db:
+    image: mysql:8.4
+    container_name: lessonswebsite-clean-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-lessonswebsite-dev-only}
+      MYSQL_DATABASE: lessonswebsite_clean
+    ports:
+      - "${MYSQL_HOST_PORT:-3308}:3306"
+    volumes:
+      - lessonswebsite_clean_mysql_data:/var/lib/mysql
+      - ./backend/mysql-clean-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build: ./backend
+    container_name: lessonswebsite-clean-backend
+    restart: unless-stopped
+    environment:
+      PORT: 5000
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: ${MYSQL_ROOT_PASSWORD:-lessonswebsite-dev-only}
+      DB_NAME: lessonswebsite_clean
+    ports:
+      - "${BACKEND_HOST_PORT:-5001}:5000"
+    volumes:
+      - lessonswebsite_clean_topic_uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  lessonswebsite_clean_mysql_data:
+    name: lessonswebsite-clean-mysql-data
+  lessonswebsite_clean_topic_uploads:
+    name: lessonswebsite-clean-topic-uploads
