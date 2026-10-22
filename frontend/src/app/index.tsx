@@ -6,6 +6,7 @@ import LandingPage from '../screens/LandingPage';
 import LessonsPage from '../screens/LessonsPage';
 import AdminPage from '../screens/AdminPage';
 import ProfilePage from '../screens/ProfilePage';
+import SimulationPage from '../screens/SimulationPage';
 import AuthPage, { UserSession } from '../screens/AuthPage';
 
 const SESSION_STORAGE_KEY = 'learn-portal-user';
@@ -65,6 +66,8 @@ export default function App() {
         return <LandingPage onNavigate={setCurrentRoute} />;
       case 'lessons':
         return <LessonsPage userId={currentUser.id} />;
+      case 'simulation':
+        return <SimulationPage />;
       case 'admin':
         return <AdminPage adminId={currentUser.id} />;
       case 'profile':
