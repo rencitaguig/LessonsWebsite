@@ -8,19 +8,31 @@ interface ExplanationPanelProps {
   l2: number;
   shoulderH: number;
   gripY: number;
+  fsmSteps: string[];
+  activeStep: string | null;
 }
 
 const deg = (radians: number) => `${toDegrees(radians).toFixed(1)}°`;
 
-export default function ExplanationPanel({ result, l1, l2, shoulderH, gripY }: ExplanationPanelProps) {
+export default function ExplanationPanel({ result, l1, l2, shoulderH, gripY, fsmSteps, activeStep }: ExplanationPanelProps) {
   return (
     <View style={styles.panel}>
       <Text style={styles.heading}>Inverse Kinematics — worked solution</Text>
 
+      {fsmSteps.length > 0 && (
+        <View style={styles.fsmRow}>
+          {fsmSteps.map((label) => (
+            <View key={label} style={[styles.fsmChip, label === activeStep && styles.fsmChipActive]}>
+              <Text style={[styles.fsmChipText, label === activeStep && styles.fsmChipTextActive]}>{label}</Text>
+            </View>
+          ))}
+        </View>
+      )}
+
       {!result && (
         <Text style={styles.body}>
-          Drag the orange crate on the ground plane. The base slews to face it (θ₀), then the shoulder and
-          elbow solve a two-link planar IK to reach it — the same math described in L15.2 and L15.9.
+          Place the orange crate on the ground and let go — the crane grasps it automatically. The base slews
+          to face it (θ₀), then shoulder and elbow solve a two-link planar IK — the math from L15.2 and L15.9.
         </Text>
       )}
 
@@ -75,6 +87,16 @@ const styles = StyleSheet.create({
   },
   heading: { fontSize: 15, fontWeight: '700', color: '#242432' },
   body: { fontSize: 13, lineHeight: 19, color: '#686775' },
+  fsmRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 4 },
+  fsmChip: {
+    backgroundColor: '#e6e1eb',
+    borderRadius: 4,
+    paddingHorizontal: 7,
+    paddingVertical: 3
+  },
+  fsmChipActive: { backgroundColor: '#1d7a46' },
+  fsmChipText: { fontSize: 10, fontWeight: '700', color: '#686775', letterSpacing: 0.4 },
+  fsmChipTextActive: { color: '#ffffff' },
   step: { fontSize: 13, lineHeight: 19, color: '#3f567f', fontFamily: 'monospace' as never },
   chosen: { color: '#1d7a46', fontWeight: '700' },
   error: { color: '#c2371f', fontWeight: '700' },

@@ -7,7 +7,8 @@ export default function ArmSimulation() {
       <Text style={styles.title}>Robotic arm simulation</Text>
       <Text style={styles.body}>
         The interactive 3D simulation runs in the web app. Open EduSphere in a browser, sign in, and choose
-        Simulation to place a target and watch the arm solve inverse kinematics live.
+        Simulation to place a crate, send the crane through a pick-and-place sequence, and watch it solve
+        inverse kinematics step by step.
       </Text>
     </View>
   );
